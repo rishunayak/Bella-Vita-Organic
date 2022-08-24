@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals &ndash; Bella Vita Organic</title>
+    <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
+    <link rel="stylesheet" href="./styles/bestSellers.css">
+</head>
+<body>
+    <select name="" id="filtering">
+        <option value="">Featured</option>
+        <option value="A-Z">Alphabetically,A to Z</option>
+        <option value="Z-A">Alphabetically,Z to A</option>
+        <option value="Low-High">Low to High</option>
+        <option value="High-Low">High to Low</option>
+    </select>
+    <div id="main"></div>
+</body>
+</html>
+<script src="./scripts/bestSellers.js"></script>
+<script>
+    let main=document.getElementById("main");
+
+    let filtering=document.getElementById("filtering");
+    const filterFunc=()=>{
+        if(filtering.value==="A-Z"){
+            bestSellersData.sort((a,b)=>{
+                let x=a.title1.toUpperCase();
+                let y=b.title1.toUpperCase();
+                if(x>y) return 1;
+                if(x<y) return -1;
+                return 0;
+            })
+            append(bestSellersData);
+        }
+        if(filtering.value==="Z-A"){
+            bestSellersData.sort((a,b)=>{
+                let x=a.title1.toUpperCase();
+                let y=b.title1.toUpperCase();
+                if(x<y) return 1;
+                if(x>y) return -1;
+                return 0;
+            })
+            append(bestSellersData);
+        }
+        if(filtering.value="Low-High"){
+            bestSellersData.sort((a,b)=>{
+                return a.finalPrice-b.finalPrice;
+            })
+            append(bestSellersData);
+        }
+        if(filtering.value="High-Low"){
+            bestSellersData.sort((a,b)=>{
+                return b.finalPrice-a.finalPrice;
+            })
+            append(bestSellersData);
+        }
+    }
+    filtering.addEventListener("change",filterFunc);
+
+    const append=(bestSellersData)=>{
+        main.innerHTML=null;
+        bestSellersData.forEach((element) => {
+            let div=document.createElement("div");
+            let image=document.createElement("img");
+            image.src=element.image;
+            let title1=document.createElement("h3");
+            title1.innerText=element.title1;
+            let title2=document.createElement("p");
+            title2.innerText=element.title2;
+            let line3=document.createElement("div");
+            let finalPrice=document.createElement("h3");
+            finalPrice.innerText=`₹ ${element.finalPrice}`;
+            let strikePrice=document.createElement("h4");
+            if(element.strikePrice===undefined){
+                strikePrice.innerText="";
+            }else{
+                strikePrice.innerText=`₹ ${element.strikePrice}`;
+                strikePrice.style.textDecoration="line-through";
+            }
+            let rating=document.createElement("h3");
+            rating.innerText=`${element.rating} ★`;
+            line3.append(finalPrice, strikePrice, rating)
+            let btn=document.createElement("button");
+            btn.innerText=element.btn;
+            div.append(image, title1, title2, line3, btn);
+            main.append(div);
+        });
+    }
+    append(bestSellersData);
+</script>

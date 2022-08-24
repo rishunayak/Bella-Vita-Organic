@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"
+    />
+    <title>Account &ndash; Bella Vita Organic</title>
+    <link rel="stylesheet" href="./styles/signUp&login.css" />
+  </head>
+  <body>
+    <form action="" method="">
+      <h1>Login</h1>
+      <input type="email" id="loginEmail" placeholder="Email" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <a href="" style="text-align: left">Forgot your password?</a>
+      <button id="login">Sign in</button>
+      <a href="./signUp.html">Create account</a>
+    </form>
+  </body>
+</html>
+<script>
+ let registerUsers=JSON.parse(localStorage.getItem("users"))||[];
+  let loginData = JSON.parse(localStorage.getItem("user")) || {};
+  let isUserloggedin=false;
+  localStorage.setItem("isUserloggedin",isUserloggedin);
+  let login = (event) => {
+    event.preventDefault();
+    loginData = {
+      email: document.getElementById("loginEmail").value,
+      password: document.getElementById("loginPassword").value,
+    };
+    // console.log('loginData :>> ', loginData);
+    localStorage.setItem("user", JSON.stringify(loginData));
+    let flag=false;
+    registerUsers.forEach((element) => {
+      if (
+        element.email === loginData.email &&
+        element.password === loginData.password
+      ) {
+        flag=true;
+      } 
+    });
+    if(flag){
+      alert("Login successful");
+        isUserloggedin=true;
+        localStorage.setItem("isUserloggedin",isUserloggedin);
+        location.href = "./newArrivals.html";
+    }else{
+      alert("Wrong Credentials");
+    }
+  };
+  document.getElementById("login").addEventListener("click", login);
+</script>
+
+
+
+                

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals &ndash; Bella Vita Organic</title>
+    <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
+    <link rel="stylesheet" href="./styles/newArrivals.css">
+</head>
+<body>
+    <select name="" id="filtering">
+        <option value="">Featured</option>
+        <option value="A-Z">Alphabetically,A to Z</option>
+        <option value="Z-A">Alphabetically,Z to A</option>
+        <option value="Low-High">Low to High</option>
+        <option value="High-Low">High to Low</option>
+    </select>
+    <div id="container">
+        <div id="sidebar"></div>
+        <div id="main"></div>
+    </div>
+</body>
+</html>
+<script src="./scripts/newArrivals.js"></script>
+<script>
+    let main=document.getElementById("main");
+
+    let filtering=document.getElementById("filtering");
+    const filterFunc=()=>{
+        if(filtering.value==="A-Z"){
+            newArrivalsData.sort((a,b)=>{
+                let x=a.title1.toUpperCase();
+                let y=b.title1.toUpperCase();
+                if(x>y) return 1;
+                if(x<y) return -1;
+                return 0;
+            })
+            append(newArrivalsData);
+        }
+        if(filtering.value==="Z-A"){
+            newArrivalsData.sort((a,b)=>{
+                let x=a.title1.toUpperCase();
+                let y=b.title1.toUpperCase();
+                if(x<y) return 1;
+                if(x>y) return -1;
+                return 0;
+            })
+            append(newArrivalsData);
+        }
+        if(filtering.value="Low-High"){
+            newArrivalsData.sort((a,b)=>{
+                return a.finalPrice-b.finalPrice;
+            })
+            append(newArrivalsData);
+        }
+        if(filtering.value="High-Low"){
+            newArrivalsData.sort((a,b)=>{
+                return b.finalPrice-a.finalPrice;
+            })
+            append(newArrivalsData);
+        }
+    }
+    filtering.addEventListener("change",filterFunc);
+
+    const append=(newArrivalsData)=>{
+        main.innerHTML=null;
+        newArrivalsData.forEach((element) => {
+            let div=document.createElement("div");
+            let imagediv=document.createElement("div");
+            let textdiv=document.createElement("div");
+            textdiv.setAttribute("id","textdiv")
+            let image=document.createElement("img");
+            image.src=element.image;
+            imagediv.append(image);
+            image.addEventListener('mouseover', (event) => {
+            image.src=element.hoverImage;
+         });
+        
+         image.addEventListener('mouseout', (event) => {
+            image.src=element.image;
+         })
+            let title1=document.createElement("h1");
+            title1.setAttribute("id","title1");
+            title1.innerText=element.title1;
+            let title2=document.createElement("p");
+            title2.setAttribute("id","title2");
+            if(element.title2===undefined){
+                title2.innerText="";
+            }else{
+                title2.innerText=element.title2;
+            }
+            let line3=document.createElement("div");
+            line3.setAttribute("id","line3");
+            let div1=document.createElement("div");
+            div1.setAttribute("id","div1");
+            let div2=document.createElement("div");
+            div2.setAttribute("id","div2");
+            let finalPrice=document.createElement("h3");
+            finalPrice.innerText=`₹ ${element.finalPrice}`;
+            let strikePrice=document.createElement("h4");
+            if(element.strikePrice===undefined){
+                strikePrice.innerText="";
+            }else{
+                strikePrice.innerText=`₹ ${element.strikePrice}`;
+                strikePrice.style.textDecoration="line-through";
+            }
+            div1.append(finalPrice, strikePrice);
+            let rating=document.createElement("h3");
+            rating.innerText=`${element.rating} ★`;
+            rating.style.color="#475d4b";
+            div2.append(rating);
+            line3.append(div1, div2);
+            let btn=document.createElement("button");
+            btn.innerText=element.btn;
+            let titlediv=document.createElement("div");
+            textdiv.setAttribute("id","textdiv");
+            titlediv.append(title1, title2)
+            textdiv.append(titlediv, line3)
+            div.append(imagediv, textdiv);
+            let box=document.createElement("div");
+            box.append(div,btn);
+            main.append(box);
+        });
+    }
+    append(newArrivalsData);
+</script>
