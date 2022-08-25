@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+.product-card {
+    height: max-content;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.product-image>img {
+    width: 100%;
+}
+
+.product-button {
+    display: block;
+    width: 100%;
+    padding: 13px 0px;
+    margin-top: 7px;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    background-color: #495b4b;
+    color: #e4f0db;
+    cursor: pointer;
+}
+
+.product-title {
+    font-size: 14px;
+    font-weight: 500;
+    height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.product-desc {
+    font-size: 14px;
+    font-weight: 300;
+    height: 34px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.product-price{
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.new-price,
+.old-price {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-left: 7px;
+    margin-top: 1.5px;
+}
+
+.rating {
+    font-weight: 600;
+}
+
+.star {
+    width: 12px;
+    margin-left: 3px;
+}
+
+.content-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-content {
+    padding: 0px 13px;
+}
+
+#nav{
+    display: flex;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    background-color: cyan;
+}
+
+#shopAll, #perfumes{
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#shopAll:hover,
+#perfumes:hover {
+    color: #495b4b;
+    transition: 200ms;
+}
+

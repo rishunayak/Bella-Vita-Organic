@@ -142,8 +142,20 @@ body {
     justify-content: space-around;
 }
 
-#perfume-Container>img{
+#perfume-Container>div{
     width: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#perfume-Container img{
+    width: 100%;
+    transition: 300ms;
+}
+
+#perfume-Container img:hover {
+    transform: scale(1.1);
+    transition: 300ms;
 }
 
 #downloadApp{
