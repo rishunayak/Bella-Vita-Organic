@@ -2222,6 +2222,71 @@ function perfumesF() {
     append(perfumes)
 }
 
+function her() {
+    let filtered = perfumes.filter(function (e) {
+        e = e.title.toLowerCase()
+        e = e.split(" ")
+        return e.includes("woman")
+    })
+
+    append(filtered)
+}perfumes
+
+function him() {
+    let filtered = perfumes.filter(function (e) {
+        e = e.title.toLowerCase()
+        e = e.split(" ")
+        console.log(e)
+        return e.includes("man")
+    })
+
+    append(filtered)
+}
+
+function unisex() {
+    let filtered = perfumes.filter(function (e) {
+        e = e.title.toLowerCase()
+        e = e.split(" ")
+        console.log(e)
+        return e.includes("unisex")
+    })
+
+    append(filtered)
+}
+
+function bodyParfum() {
+    let filtered = perfumes.filter(function (e) {
+        e = e.title.toLowerCase()
+        e = e.split(" ")
+        console.log(e)
+        return e.includes("body")
+    })
+
+    append(filtered)
+}
+
+function luxury() {
+    let filtered = perfumes.filter(function (e) {
+        e = e.title.toLowerCase()
+        e = e.split(" ")
+        console.log(e)
+        return e.includes("luxury")
+    })
+
+    append(filtered)
+}
+
+function gift() {
+    let filtered = perfumes.filter(function (e) {
+        e = e.title.toLowerCase()
+        e = e.split(" ")
+        console.log(e)
+        return e.includes("gift")
+    })
+
+    append(filtered)
+}
+
 // -----------------------------------------------------------------
 
 function append(data) {
