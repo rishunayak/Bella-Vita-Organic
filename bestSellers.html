@@ -7,8 +7,12 @@
     <title>#1Bestsellers &ndash; Bella Vita Organic</title>
     <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
     <link rel="stylesheet" href="./components/style.css">
+    <link rel="stylesheet" href="./components/navbar.css">
+    <link rel="stylesheet" href="./components/footer.css">
 </head>
 <body>
+    <div id="top_bar"></div>
+    <div id="header"></div>
     <div id="filterdiv">
         <label for="" id="textsortby">Sort by: </label>
         <select name="" id="filtering">
@@ -23,6 +27,7 @@
         <div id="sidebar"></div>
         <div id="main"></div>
     </div>
+    <div id="footerdiv"></div>
     <div id="whatsApp">
         <a class="hide" href="https://api.whatsapp.com/send?phone=919319011662&text=Hi,%20I%20need%20some%20Help" target="_blank" id="whatsapp-message">
             <img src="//cdn.shopify.com/s/files/1/0054/6665/2718/t/386/assets/whatsapp.svg?v=107532592768653809461659272626" />
@@ -36,7 +41,17 @@
 <script type="module">
     
     import {append, filterFunc} from "./components/append.js"
-
+    import {navbar,head,scrollFunction} from "./components/navbar.js"
+  import {footer} from "./components/footer.js"
+let top_bar=document.getElementById("header");
+top_bar.innerHTML=head();
+  let nav=document.getElementById("header");
+  nav.innerHTML=navbar();
+let footerdiv=document.getElementById("footerdiv");
+footerdiv.innerHTML=footer();
+window.onscroll = function () {
+    scrollFunction();
+  };
     let main = document.querySelector("#main");
     
     append(bestSellersData);

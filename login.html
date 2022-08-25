@@ -9,10 +9,15 @@
       type="image/png"
       href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Account &ndash; Bella Vita Organic</title>
     <link rel="stylesheet" href="./styles/signUp&login.css" />
+    <link rel="stylesheet" href="./components/footer.css">
+    <link rel="stylesheet" href="./components/navbar.css">
   </head>
   <body>
+    <div id="top_bar"></div>
+    <div id="header"></div>
     <form action="" method="">
       <h1>Login</h1>
       <input type="email" id="loginEmail" placeholder="Email" />
@@ -21,9 +26,23 @@
       <button id="login">Sign in</button>
       <a href="./signUp.html">Create account</a>
     </form>
+    <div id="footerdiv"></div>
   </body>
 </html>
-<script>
+<script type="module">
+
+import {navbar,head,scrollFunction} from "./components/navbar.js"
+  import {footer} from "./components/footer.js"
+let top_bar=document.getElementById("header");
+top_bar.innerHTML=head();
+  let nav=document.getElementById("header");
+  nav.innerHTML=navbar();
+let footerdiv=document.getElementById("footerdiv");
+footerdiv.innerHTML=footer();
+window.onscroll = function () {
+    scrollFunction();
+  };
+
  let registerUsers=JSON.parse(localStorage.getItem("users"))||[];
   let loginData = JSON.parse(localStorage.getItem("user")) || {};
   let isUserloggedin=false;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./components/style.css">
+</head>
+<body>
+    <div>
+     <div id="left"></div>
+     <div id="right"></div>
+    </div>
+</body>
+</html>
+<script>
+    let addObj=JSON.parse(localStorage.getItem("addToCart"))||{};
+
+    let left=document.getElementById("left");
+    let right=document.getElementById("right");
+
+    function displayleft(addObj){
+        left.innerHTML=null;
+        let div=document.createElement("div");
+        let image=document.createElement("img");
+        image.src=addObj.image;
+        div.append(image);
+        left.append(div);
+    }
+displayleft(addObj);
+
+function displayright(addObj){
+        right.innerHTML=null;
+        let card = document.createElement("div")
+        card.setAttribute("class", "product-card")
+        let contentDiv = document.createElement("div")
+        contentDiv.setAttribute("class", "product-content")
+        let title = document.createElement("div")
+        title.setAttribute("class", "product-title")
+        title.innerText = addObj.title
+        let desc = document.createElement("div")
+        desc.setAttribute("class", "product-desc")
+        desc.innerText = addObj.description
+        let bottomDiv = document.createElement("div")
+        bottomDiv.setAttribute("class", "content-bottom")
+        let priceDiv = document.createElement("div")
+        priceDiv.setAttribute("class", "product-price")
+        let oldPrice = document.createElement("span")
+        oldPrice.setAttribute("class", "old-price")
+		if(addObj.strikePrice){
+			oldPrice.innerText = `₹ ${addObj["strikePrice"]}`;
+		}
+        let newPrice = document.createElement("span")
+        newPrice.setAttribute("class", "finalPrice")
+        newPrice.innerText = `₹ ${addObj["finalPrice"]}`;
+        let ratingDiv = document.createElement("div")
+        ratingDiv.setAttribute("class", "product-rating")
+        let rating = document.createElement("span")
+        rating.setAttribute("class", "rating")
+        rating.innerText = `${addObj.rating} ★`;
+
+        priceDiv.append(newPrice, oldPrice)
+        ratingDiv.append(rating)
+        bottomDiv.append(priceDiv, ratingDiv)
+        contentDiv.append(title, desc, bottomDiv)
+        card.append( contentDiv)
+        right.append(card)
+    }
+displayright(addObj);
+</script>

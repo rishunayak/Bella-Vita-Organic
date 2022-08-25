@@ -47,7 +47,9 @@ let main = document.querySelector("#main");
         let button = document.createElement("button")
         button.innerText = "ADD TO CARD"
         button.setAttribute("class", "product-button")
-
+        button.addEventListener("click",()=>{
+            addToCartFunc(e);
+        })
         imgDiv.append(img)
         priceDiv.append(newPrice, oldPrice)
         ratingDiv.append(rating)
@@ -58,6 +60,18 @@ let main = document.querySelector("#main");
     })
 }
 
+let addObj=JSON.parse(localStorage.getItem("addToCart"))||{};
+function addToCartFunc(e){
+    addObj={
+        image:e.image,
+        title:e.title,
+        description:e.description,
+        finalPrice:e.finalPrice,
+        strikePrice:e.strikePrice,
+        rating:e.rating
+    };
+    localStorage.setItem("addToCart",JSON.stringify(addObj));
+}
 
 
 
@@ -103,4 +117,4 @@ let main = document.querySelector("#main");
         console.log("hi")
     }
 
-	export {append, filterFunc}
+	export {append, filterFunc, addToCartFunc}
