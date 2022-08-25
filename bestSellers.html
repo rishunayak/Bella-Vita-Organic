@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#1Bestsellers &ndash; Bella Vita Organic</title>
     <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
-    <link rel="stylesheet" href="./styles/newArrivals.css">
+    <link rel="stylesheet" href="./components/style.css">
 </head>
 <body>
     <div id="filterdiv">
@@ -32,107 +32,19 @@
 </body>
 </html>
 <script src="./scripts/bestSellers.js"></script>
-<script>
-    let main=document.getElementById("main");
+<script type="module" src="./components/append.js"></script>
+<script type="module">
+    
+    import {append, filterFunc} from "./components/append.js"
 
-    let filtering=document.getElementById("filtering");
-    const filterFunc=()=>{
-        if(filtering.value==="A-Z"){
-            bestSellersData.sort((a,b)=>{
-                let x=a.title1.toUpperCase();
-                let y=b.title1.toUpperCase();
-                if(x>y) return 1;
-                if(x<y) return -1;
-                return 0;
-            })
-            append(bestSellersData);
-        }
-        if(filtering.value==="Z-A"){
-            bestSellersData.sort((a,b)=>{
-                let x=a.title1.toUpperCase();
-                let y=b.title1.toUpperCase();
-                if(x<y) return 1;
-                if(x>y) return -1;
-                return 0;
-            })
-            append(bestSellersData);
-        }
-        if(filtering.value==="Low-High"){
-            bestSellersData.sort((a,b)=>{
-                return a.finalPrice-b.finalPrice;
-            })
-            append(bestSellersData);
-        }
-        if(filtering.value==="High-Low"){
-            bestSellersData.sort((a,b)=>{
-                return b.finalPrice-a.finalPrice;
-            })
-            append(bestSellersData);
-        }
-    }
-    filtering.addEventListener("change",filterFunc);
-
-    const append=(bestSellersData)=>{
-        main.innerHTML=null;
-        bestSellersData.forEach((element) => {
-            let div=document.createElement("div");
-            let imagediv=document.createElement("div");
-            let textdiv=document.createElement("div");
-            textdiv.setAttribute("id","textdiv")
-            let image=document.createElement("img");
-            image.src=element.image;
-            imagediv.append(image);
-            image.addEventListener('mouseover', (event) => {
-            image.src=element.hoverImage;
-         });
-        
-         image.addEventListener('mouseout', (event) => {
-            image.src=element.image;
-         })
-            let title1=document.createElement("h1");
-            title1.setAttribute("id","title1");
-            title1.innerText=element.title1;
-            let title2=document.createElement("p");
-            title2.setAttribute("id","title2");
-            if(element.title2===undefined){
-                title2.innerText="";
-            }else{
-                title2.innerText=element.title2;
-            }
-            let line3=document.createElement("div");
-            line3.setAttribute("id","line3");
-            let div1=document.createElement("div");
-            div1.setAttribute("id","div1");
-            let div2=document.createElement("div");
-            div2.setAttribute("id","div2");
-            let finalPrice=document.createElement("h3");
-            finalPrice.innerText=`₹ ${element.finalPrice}`;
-            let strikePrice=document.createElement("h4");
-            if(element.strikePrice===undefined){
-                strikePrice.innerText="";
-            }else{
-                strikePrice.innerText=`₹ ${element.strikePrice}`;
-                strikePrice.style.textDecoration="line-through";
-            }
-            div1.append(finalPrice, strikePrice);
-            div1.style.width="31%";
-            div1.style.justifyContent="space-between";
-            let rating=document.createElement("h3");
-            rating.innerText=`${element.rating} ★`;
-            rating.style.color="#475d4b";
-            div2.append(rating);
-            line3.append(div1, div2);
-            let btn=document.createElement("button");
-            btn.innerText=element.btn;
-            let titlediv=document.createElement("div");
-            textdiv.setAttribute("id","textdiv");
-            titlediv.append(title1, title2)
-            textdiv.append(titlediv, line3)
-            div.append(imagediv, textdiv);
-            let box=document.createElement("div");
-            box.append(div,btn);
-            main.append(box);
-        });
-    }
+    let main = document.querySelector("#main");
+    
     append(bestSellersData);
+    let filtering=document.getElementById("filtering");
+    filtering.addEventListener("change",()=>{
+        filterFunc(bestSellersData);
+    })
+
+
 </script>
+   
