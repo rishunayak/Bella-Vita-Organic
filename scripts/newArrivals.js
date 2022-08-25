@@ -7,7 +7,7 @@ let newArrivalsData=[
       "title2": "Brighten, Nourish, Exfoliate, Unisex perfume, Coffee Cubes",
       "finalPrice": 981,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "",
       "badge": "",
       "strikePrice": ""
@@ -20,7 +20,7 @@ let newArrivalsData=[
       "title2": "Soothes, Repairs and Hydrates",
       "finalPrice": 225,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "10% OFF",
       "badge": "Sale",
       "strikePrice": 249
@@ -33,7 +33,7 @@ let newArrivalsData=[
       "title2": "Hydrating, Cleansing & Brightening",
       "finalPrice": 225,
       "rating": "4.9",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "19% OFF",
       "badge": "Sale",
       "strikePrice": 279
@@ -46,7 +46,7 @@ let newArrivalsData=[
       "title2": "Hydrating & Moisturising",
       "finalPrice": 349,
       "rating": "4.6",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "13% OFF",
       "badge": "Sale",
       "strikePrice": 399
@@ -59,7 +59,7 @@ let newArrivalsData=[
       "title2": "Hydrating, Repairing and Nourishing",
       "finalPrice": 381,
       "rating": "4.9",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "24% OFF",
       "badge": "Sale",
       "strikePrice": 499
@@ -72,7 +72,7 @@ let newArrivalsData=[
       "title2": "Protects, Hydrates, Brightens",
       "finalPrice": 284,
       "rating": "0",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "25% OFF",
       "badge": "Sale",
       "strikePrice": 379
@@ -85,7 +85,7 @@ let newArrivalsData=[
       "title2": "Pore cleansing, Radiating & Skin Rejuvenating",
       "finalPrice": 320,
       "rating": "4.8",
-      "btn": "Sold Out",
+      "btn": "SOLD OUT",
       "discount": "20% OFF",
       "badge": "Sold out",
       "strikePrice": 399
@@ -98,7 +98,7 @@ let newArrivalsData=[
       "title2": "Brightening & Anti Pigmentation",
       "finalPrice": 349,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "7% OFF",
       "badge": "Sale",
       "strikePrice": 375
@@ -111,7 +111,7 @@ let newArrivalsData=[
       "title2": "Skin Brightening, Repair and Dryness",
       "finalPrice": 449,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "18% OFF",
       "badge": "Sale",
       "strikePrice": 549
@@ -124,7 +124,7 @@ let newArrivalsData=[
       "title2": "Anti Frizz, Anti Hairfall & Nourishing",
       "finalPrice": 499,
       "rating": "4.8",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "17% OFF",
       "badge": "Sale",
       "strikePrice": 599
@@ -137,7 +137,7 @@ let newArrivalsData=[
       "title2": "Skin Brightening & Hydrating Oil for Youthful Skin",
       "finalPrice": 499,
       "rating": "4.7",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "17% OFF",
       "badge": "Sale",
       "strikePrice": 599
@@ -150,7 +150,7 @@ let newArrivalsData=[
       "title2": "Brightening & Anti Pigmentation",
       "finalPrice": 325,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "13% OFF",
       "badge": "Sale",
       "strikePrice": 375
@@ -163,7 +163,7 @@ let newArrivalsData=[
       "title2": "Hydrates & Nourishes",
       "finalPrice": 225,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "10% OFF",
       "badge": "Sale",
       "strikePrice": 249
@@ -176,7 +176,7 @@ let newArrivalsData=[
       "title2": "Skin Brightening & Anti Blemish",
       "finalPrice": 349,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "13% OFF",
       "badge": "Sale",
       "strikePrice": 399
@@ -189,7 +189,7 @@ let newArrivalsData=[
       "title2": "",
       "finalPrice": 249,
       "rating": "5",
-      "btn": "Sold Out",
+      "btn": "SOLD OUT",
       "discount": "17% OFF",
       "badge": "Sold out",
       "strikePrice": 299
@@ -202,7 +202,7 @@ let newArrivalsData=[
       "title2": "",
       "finalPrice": 249,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "17% OFF",
       "badge": "Sale",
       "strikePrice": 299
@@ -215,7 +215,7 @@ let newArrivalsData=[
       "title2": "",
       "finalPrice": 249,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "17% OFF",
       "badge": "Sale",
       "strikePrice": 299
@@ -228,7 +228,7 @@ let newArrivalsData=[
       "title2": "",
       "finalPrice": 249,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "17% OFF",
       "badge": "Sale",
       "strikePrice": 299
@@ -241,7 +241,7 @@ let newArrivalsData=[
       "title2": "",
       "finalPrice": 249,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "17% OFF",
       "badge": "Sale",
       "strikePrice": 299
@@ -254,7 +254,7 @@ let newArrivalsData=[
       "title2": "",
       "finalPrice": 249,
       "rating": "4.6",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "17% OFF",
       "badge": "Sale",
       "strikePrice": 299
@@ -267,7 +267,7 @@ let newArrivalsData=[
       "title2": "Refreshes, Repairs, Rejuvenates",
       "finalPrice": 929,
       "rating": "5",
-      "btn": "Add to cart",
+      "btn": "ADD TO CART",
       "discount": "40% OFF",
       "badge": "Sale",
       "strikePrice": 1547

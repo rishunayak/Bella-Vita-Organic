@@ -9,16 +9,25 @@
     <link rel="stylesheet" href="./styles/newArrivals.css">
 </head>
 <body>
-    <select name="" id="filtering">
-        <option value="">Featured</option>
-        <option value="A-Z">Alphabetically,A to Z</option>
-        <option value="Z-A">Alphabetically,Z to A</option>
-        <option value="Low-High">Low to High</option>
-        <option value="High-Low">High to Low</option>
-    </select>
+    <div id="filterdiv">
+        <label for="" id="textsortby">Sort by: </label>
+        <select name="" id="filtering">
+            <option value="all">Featured</option>
+            <option value="A-Z">Alphabetically,A to Z</option>
+            <option value="Z-A">Alphabetically,Z to A</option>
+            <option value="Low-High">Price, Low to High</option>
+            <option value="High-Low">Price, High to Low</option>
+        </select>
+    </div>
     <div id="container">
         <div id="sidebar"></div>
         <div id="main"></div>
+    </div>
+    <div id="whatsApp">
+        <a class="hide" href="https://api.whatsapp.com/send?phone=919319011662&text=Hi,%20I%20need%20some%20Help" target="_blank" id="whatsapp-message">
+            <img src="//cdn.shopify.com/s/files/1/0054/6665/2718/t/386/assets/whatsapp.svg?v=107532592768653809461659272626" />
+            <span>Message Us</span>
+          </a>
     </div>
 </body>
 </html>
@@ -26,9 +35,13 @@
 <script>
     let main=document.getElementById("main");
 
+    // *********************Filter*************************
+
     let filtering=document.getElementById("filtering");
     const filterFunc=()=>{
-        if(filtering.value==="A-Z"){
+        if(filtering.value==="all"){
+            append(newArrivalsData);
+        }else if(filtering.value==="A-Z"){
             newArrivalsData.sort((a,b)=>{
                 let x=a.title1.toUpperCase();
                 let y=b.title1.toUpperCase();
@@ -38,7 +51,7 @@
             })
             append(newArrivalsData);
         }
-        if(filtering.value==="Z-A"){
+        else if(filtering.value==="Z-A"){
             newArrivalsData.sort((a,b)=>{
                 let x=a.title1.toUpperCase();
                 let y=b.title1.toUpperCase();
@@ -48,13 +61,13 @@
             })
             append(newArrivalsData);
         }
-        if(filtering.value="Low-High"){
+        else if(filtering.value==="Low-High"){
             newArrivalsData.sort((a,b)=>{
                 return a.finalPrice-b.finalPrice;
             })
             append(newArrivalsData);
         }
-        if(filtering.value="High-Low"){
+        else if(filtering.value==="High-Low"){
             newArrivalsData.sort((a,b)=>{
                 return b.finalPrice-a.finalPrice;
             })
@@ -98,14 +111,16 @@
             div2.setAttribute("id","div2");
             let finalPrice=document.createElement("h3");
             finalPrice.innerText=`₹ ${element.finalPrice}`;
-            let strikePrice=document.createElement("h4");
-            if(element.strikePrice===undefined){
+            let strikePrice=document.createElement("p");
+            if(!element.strikePrice){
                 strikePrice.innerText="";
             }else{
-                strikePrice.innerText=`₹ ${element.strikePrice}`;
+                strikePrice.innerText=`₹${element.strikePrice}`;
                 strikePrice.style.textDecoration="line-through";
             }
             div1.append(finalPrice, strikePrice);
+            div1.style.width="31%";
+            div1.style.justifyContent="space-between";
             let rating=document.createElement("h3");
             rating.innerText=`${element.rating} ★`;
             rating.style.color="#475d4b";

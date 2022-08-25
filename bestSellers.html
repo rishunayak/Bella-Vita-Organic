@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Arrivals &ndash; Bella Vita Organic</title>
+    <title>#1Bestsellers &ndash; Bella Vita Organic</title>
     <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
-    <link rel="stylesheet" href="./styles/bestSellers.css">
+    <link rel="stylesheet" href="./styles/newArrivals.css">
 </head>
 <body>
-    <select name="" id="filtering">
-        <option value="">Featured</option>
-        <option value="A-Z">Alphabetically,A to Z</option>
-        <option value="Z-A">Alphabetically,Z to A</option>
-        <option value="Low-High">Low to High</option>
-        <option value="High-Low">High to Low</option>
-    </select>
-    <div id="main"></div>
+    <div id="filterdiv">
+        <label for="" id="textsortby">Sort by: </label>
+        <select name="" id="filtering">
+            <option value="all">Featured</option>
+            <option value="A-Z">Alphabetically,A to Z</option>
+            <option value="Z-A">Alphabetically,Z to A</option>
+            <option value="Low-High">Price, Low to High</option>
+            <option value="High-Low">Price, High to Low</option>
+        </select>
+    </div>
+    <div id="container">
+        <div id="sidebar"></div>
+        <div id="main"></div>
+    </div>
+    <div id="whatsApp">
+        <a class="hide" href="https://api.whatsapp.com/send?phone=919319011662&text=Hi,%20I%20need%20some%20Help" target="_blank" id="whatsapp-message">
+            <img src="//cdn.shopify.com/s/files/1/0054/6665/2718/t/386/assets/whatsapp.svg?v=107532592768653809461659272626" />
+            <span>Message Us</span>
+          </a>
+    </div>
 </body>
 </html>
 <script src="./scripts/bestSellers.js"></script>
@@ -45,13 +57,13 @@
             })
             append(bestSellersData);
         }
-        if(filtering.value="Low-High"){
+        if(filtering.value==="Low-High"){
             bestSellersData.sort((a,b)=>{
                 return a.finalPrice-b.finalPrice;
             })
             append(bestSellersData);
         }
-        if(filtering.value="High-Low"){
+        if(filtering.value==="High-Low"){
             bestSellersData.sort((a,b)=>{
                 return b.finalPrice-a.finalPrice;
             })
@@ -64,13 +76,35 @@
         main.innerHTML=null;
         bestSellersData.forEach((element) => {
             let div=document.createElement("div");
+            let imagediv=document.createElement("div");
+            let textdiv=document.createElement("div");
+            textdiv.setAttribute("id","textdiv")
             let image=document.createElement("img");
             image.src=element.image;
-            let title1=document.createElement("h3");
+            imagediv.append(image);
+            image.addEventListener('mouseover', (event) => {
+            image.src=element.hoverImage;
+         });
+        
+         image.addEventListener('mouseout', (event) => {
+            image.src=element.image;
+         })
+            let title1=document.createElement("h1");
+            title1.setAttribute("id","title1");
             title1.innerText=element.title1;
             let title2=document.createElement("p");
-            title2.innerText=element.title2;
+            title2.setAttribute("id","title2");
+            if(element.title2===undefined){
+                title2.innerText="";
+            }else{
+                title2.innerText=element.title2;
+            }
             let line3=document.createElement("div");
+            line3.setAttribute("id","line3");
+            let div1=document.createElement("div");
+            div1.setAttribute("id","div1");
+            let div2=document.createElement("div");
+            div2.setAttribute("id","div2");
             let finalPrice=document.createElement("h3");
             finalPrice.innerText=`₹ ${element.finalPrice}`;
             let strikePrice=document.createElement("h4");
@@ -80,13 +114,24 @@
                 strikePrice.innerText=`₹ ${element.strikePrice}`;
                 strikePrice.style.textDecoration="line-through";
             }
+            div1.append(finalPrice, strikePrice);
+            div1.style.width="31%";
+            div1.style.justifyContent="space-between";
             let rating=document.createElement("h3");
             rating.innerText=`${element.rating} ★`;
-            line3.append(finalPrice, strikePrice, rating)
+            rating.style.color="#475d4b";
+            div2.append(rating);
+            line3.append(div1, div2);
             let btn=document.createElement("button");
             btn.innerText=element.btn;
-            div.append(image, title1, title2, line3, btn);
-            main.append(div);
+            let titlediv=document.createElement("div");
+            textdiv.setAttribute("id","textdiv");
+            titlediv.append(title1, title2)
+            textdiv.append(titlediv, line3)
+            div.append(imagediv, textdiv);
+            let box=document.createElement("div");
+            box.append(div,btn);
+            main.append(box);
         });
     }
     append(bestSellersData);
