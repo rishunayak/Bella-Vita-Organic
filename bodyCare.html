@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/cartbar.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/bodyCare.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- Side Bar Cart -->
+    <div id="cartbar" style="display: none;">
+        <div>
+         <p id="cartclose">Your Cart <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012151660996460734/unknown.png" alt="" ></p>
+         <a href="shop_all.html">Continue Shopping</a>
+        </div>
+        <div id="cartp">
+
+        </div>
+        <div id="checkout">
+        </div>
+    </div>
+   
+    <!-- Side Bar Cart End-->
+
+
+    <!-- Header and Navbar Start -->
+  
+    <div id="header">
+        <div id="top_bar"></div>
+        <div id="navbar">
+
+    
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVO_220_x_220_480x.png?v=1653304683" alt=""> 
+                <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/Brave_220_x_220_480x.png?v=1653304701" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVL_220_x_220_480x.png?v=1653304721" alt="">
+            </div>
+
+            <div>
+                <a href="shopAll.html">SHOP ALL</a> |
+                <a href="newArrivals.html">NEW ARRIVALS</a> |
+                <a href="bestSellers.html">BESTSELLERS</a> |
+                <a href="skinCare.html">SKIN CARE</a> |
+                <a href="hairCare.html">HAIR CARE</a> | 
+                <a href="bodyCare.html">BODY CARE</a> |
+                <a href="prefumes.html">PREFUMES</a> |
+                <a href="combos.html">COMBOS</a> |
+                <a href="buildAbox.html">BUILD A BOX</a> 
+               
+             </div>
+             
+             <div>
+                <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012088877302939748/unknown.png" alt="">
+                <a href="login.html"><img src="https://cdn.discordapp.com/attachments/707486765136740384/1012089121168171028/unknown.png" alt=""></a>
+                <a href="#"><img  src="https://cdn.discordapp.com/attachments/707486765136740384/1012089258745544784/unknown.png" alt="" onclick="cart()"  id="cartpage"></a> 
+                <span id="cart"></span>
+            </div>  
+            
+        </div>
+           
+    </div>
+
+        <!-- Header and Navbar Start End -->
+    
+ <!-- Filter JS start -->
+
+    <div id="filterdiv">
+        <label for="" id="totalProducts"></label>
+        <label for="" id="textsortby">Sort by: </label>
+        <select name="" id="filtering">
+            <option value="all">Featured</option>
+            <option value="A-Z">Alphabetically,A to Z</option>
+            <option value="Z-A">Alphabetically,Z to A</option>
+            <option value="Low-High">Price, Low to High</option>
+            <option value="High-Low">Price, High to Low</option>
+        </select>
+    </div>
+ <!-- Filter JS End -->
+
+
+    <!-- Body  -->
+
+    <div id="container">
+        <div id="side_nav"></div>
+        <div id="main"></div>
+    </div>
+
+    <!-- Body End -->
+
+
+    <div id="footerdiv"></div>
+
+</body>
+</html>
+
+<script src="./scripts/bodyCare.js"></script>
+
+
+
+<script>
+   
+   window.onscroll = function () {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 370||
+        document.documentElement.scrollTop > 100
+      ) {
+        document.getElementById("header").style.position = "fixed";
+        document.getElementById("header").style.width="100%";
+        document.getElementById("header").style.zIndex="1";
+        document.getElementById("header").style.background="white";
+      } else {
+        document.getElementById("header").style.position = "static";
+      }
+    }
+
+   
+//    Header
+     
+let head=()=>
+ {
+    let data=["FREE SHIPPING on PREPAID Orders","Flexi Box - Buy any 4 products at ₹999"];
+    let count=0;
+    document.getElementById("top_bar").innerText=data[count];
+    count++
+
+    setInterval(()=>
+    {
+        if(count==data.length)
+        {
+            count=0;
+        }
+        document.getElementById("top_bar").innerText=data[count];
+        count++
+    },5000)
+ }
+ head();
+
+
+// Side Cart Bar
+
+function cart()
+{
+
+     document.getElementById("cartbar").style.display="block";  
+}
+
+
+// Display Cart Bar
+
+displayCart();
+
+function displayCart()
+{
+    document.getElementById("cartp").innerHTML=null;
+    document.getElementById("checkout").innerHTML=null;
+    let cartdata=JSON.parse(localStorage.getItem("added_to_cart")) || [];
+    document.getElementById("cart").innerText=cartdata.length;
+   let total_price=0;
+    cartdata.forEach((ele,index)=>
+    { console.log("hello bro")
+        let mainDiv=document.createElement("div");
+
+        let imgDiv=document.createElement("div");
+        let img=document.createElement("img");
+        img.src=ele.image;
+       
+        imgDiv.append(img);
+
+        let detDiv=document.createElement("div");
+
+        let title=document.createElement("p");
+        title.innerText=ele.title;
+        let price=document.createElement("span");
+        price.innerText=`₹${(+ele.price)*(+ele.quantity)}`;
+       
+        let price2=document.createElement("span");
+        price2.innerText=ele.price2
+
+        let divUpdate=document.createElement("div");
+         
+        let bDiv=document.createElement("div");
+
+        let dec=document.createElement("button");
+        dec.innerText="-";
+        dec.addEventListener("click",function()
+        {
+            
+            let count=+(ele.quantity);
+            if(count!=1)
+            {
+                
+                
+                let getData=JSON.parse(localStorage.getItem("added_to_cart"));
+
+             getData.forEach((elem)=>
+             {
+              if(elem.title==ele.title)
+              {
+                elem.quantity--;
+                localStorage.setItem("added_to_cart",JSON.stringify(getData))
+                displayCart()
+              }
+           })
+            }
+          
+        })
+        let inpData=document.createElement("input");
+        inpData.type="text";
+        inpData.value=ele.quantity;
+        inpData.id="count"
+        let inc=document.createElement("button");
+        inc.innerText="+";
+        inc.addEventListener("click",function()
+        {
+            let count=ele.quantity;
+              +(count)++;
+           
+             
+           let getData=JSON.parse(localStorage.getItem("added_to_cart"));
+
+           getData.forEach((elem)=>
+           {
+              if(elem.title==ele.title)
+              {
+                elem.quantity++;
+                localStorage.setItem("added_to_cart",JSON.stringify(getData))
+                displayCart()
+              }
+           })
+
+
+                
+        })
+        bDiv.append(dec,inpData,inc)
+        
+        let Ddel=document.createElement("div");
+        let imgicon=document.createElement("img");
+        imgicon.src="https://cdn.discordapp.com/attachments/707486765136740384/1012147963801378876/unknown.png";
+        imgicon.style.width="20px";
+        imgicon.addEventListener("click",function()
+        {
+            cartdata.splice(index,1);
+            localStorage.setItem("added_to_cart",JSON.stringify(cartdata));
+            displayCart()
+        })
+        Ddel.append(imgicon)
+
+        divUpdate.append(bDiv,Ddel)
+       
+         detDiv.append(title,price,divUpdate)
+
+         mainDiv.append(imgDiv,detDiv);
+         
+         document.getElementById("cartp").append(mainDiv)
+         total_price=(+ele.price)*(+ele.quantity)+total_price;
+    })
+
+    let buybutton=document.createElement("button");
+    buybutton.innerText=`CHECKOUT │ ₹${total_price}`;
+    buybutton.id="checkoutbutton";
+    buybutton.addEventListener("click",function()
+    {
+        window.location.href="checkout.html";
+    })
+   
+    document.getElementById("checkout").append(buybutton);
+
+   document.getElementById("cartclose").addEventListener("click",function()
+   {
+    document.getElementById("cartbar").style.display="none";  
+   })  
+  
+}
+
+</script>
+
+
+
+<script type="module">
+    
+    import {append, filterFunc} from "./components/append.js"
+    import {sidebar} from "./components/sidebar.js"
+  import {footer} from "./components/footer.js"
+
+
+  let side_nav=document.getElementById("side_nav");
+  side_nav.innerHTML=sidebar();
+
+let footerdiv=document.getElementById("footerdiv");
+footerdiv.innerHTML=footer();
+
+let main = document.querySelector("#main");
+// <!-- ************************************put here your data in the form of array of objects******* -->   
+    append(bodyCare);
+    document.getElementById("totalProducts").innerText=bodyCare.length+" products";
+    let filtering=document.getElementById("filtering");
+    filtering.addEventListener("change",()=>{
+        filterFunc(bodyCare);
+ })
+    // <!-- *************************************************************** -->
+    </script>
