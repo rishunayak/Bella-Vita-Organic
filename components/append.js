@@ -19,6 +19,9 @@ let main = document.querySelector("#main");
          img.addEventListener('mouseout', (event) => {
             img.src=e.image;
          })
+         img.addEventListener("click",()=>{
+            addToCartFunc(e);
+        })
         let contentDiv = document.createElement("div")
         contentDiv.setAttribute("class", "product-content")
         let title = document.createElement("div")
@@ -47,8 +50,32 @@ let main = document.querySelector("#main");
         let button = document.createElement("button")
         button.innerText = "ADD TO CARD"
         button.setAttribute("class", "product-button")
-        button.addEventListener("click",()=>{
-            addToCartFunc(e);
+        button.addEventListener("click",function()
+        {
+           let store={
+               image:e.image,
+               title:e.title,
+               price:e.finalPrice,
+               price2:e.strikePrice,
+               quantity:1,
+           }
+           let data=JSON.parse(localStorage.getItem("added_to_cart"))|| [];
+           let check=0
+           data.forEach((e)=>
+           {
+               if(e.title==store.title)
+               {
+                   +(e.quantity)++
+                   check=1;
+               }
+           })
+           if(check!=1)
+           {
+               data.push(store);
+           }
+           
+           localStorage.setItem("added_to_cart",JSON.stringify(data));
+           displayCart();
         })
         imgDiv.append(img)
         priceDiv.append(newPrice, oldPrice)
@@ -68,7 +95,8 @@ function addToCartFunc(e){
         description:e.description,
         finalPrice:e.finalPrice,
         strikePrice:e.strikePrice,
-        rating:e.rating
+        rating:e.rating,
+        quantity:1,
     };
     localStorage.setItem("addToCart",JSON.stringify(addObj));
 }

@@ -1,16 +1,28 @@
 function navbar(){
     return `
 
-    
+    <div id="cartbar" style="display: none;">
+        <div>
+         <p id="cartclose">Your Cart <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012151660996460734/unknown.png" alt="" ></p>
+         <a href="shop_all.html">Continue Shopping</a>
+        </div>
+        <div id="cartp">
+
+        </div>
+        <div id="checkout">
+
+        </div>
+    </div>
+
     <div id="navbar">
 
-        <div>
+        <div id="nav1">
             <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVO_220_x_220_480x.png?v=1653304683" alt=""> 
             <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/Brave_220_x_220_480x.png?v=1653304701" alt="">
             <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVL_220_x_220_480x.png?v=1653304721" alt="">
         </div>
 
-        <div>
+        <div id="nav2">
             <a href="shop_all.html">SHOP ALL</a> |
             <a href="new_arrivals.html">NEW ARRIVALS</a> |
             <a href="bestsellers.html">BESTSELLERS</a> |
@@ -23,7 +35,7 @@ function navbar(){
            
          </div>
          
-         <div>
+         <div id="nav3">
             <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012088877302939748/unknown.png" alt="">
             <a href="login.html"><img src="https://cdn.discordapp.com/attachments/707486765136740384/1012089121168171028/unknown.png" alt=""></a>
             <a href="#"><img  src="https://cdn.discordapp.com/attachments/707486765136740384/1012089258745544784/unknown.png" alt="" onclick="cart()"  id="cartpage"></a> 
@@ -52,19 +64,4 @@ let head=()=>
  }
  head();
 
- 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 370||
-      document.documentElement.scrollTop > 100
-    ) {
-      document.getElementById("header").style.position = "fixed";
-      document.getElementById("header").style.width="100%";
-      document.getElementById("header").style.zIndex="1";
-      document.getElementById("header").style.background="white";
-    } else {
-      document.getElementById("header").style.position = "static";
-    }
-  }
-
-export {navbar,head,scrollFunction}
+export {navbar,head}

@@ -4,7 +4,7 @@ body {
 
 #container{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
 #filterdiv{
@@ -13,20 +13,34 @@ body {
     align-items: center;
     padding: 30px;
 }
-#filtering{
-    padding: 5px;
-    margin-left: 25px;
-    border: none;
-}
-#sidebar{
+#filterdiv>div:nth-child(1){
     width: 20%;
 }
+#filterdiv>div:nth-child(2){
+    width: 60%;
+}
+#filterdiv>div:nth-child(3){
+    width: 20%;
+}
+div#filterdiv>div:first-child{
+    width: 70%;
+    text-align: center;
+}
+div#filterdiv>div:nth-child(2){
+    width: 30%;
+}
+
+#totalProducts{
+    margin-right: 20%;
+}
+
 
 #main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    width: 80%;
+    gap: 20px;
+    width: 75%;
+    margin: auto;
 }
 
 .product-card {
@@ -120,3 +134,30 @@ a#whatsapp-message span {
     padding: 0 0.4rem;
     line-height: 41px;
 }
+/* large screen */
+@media all and (min-width: 901px) and (max-width: 1100px) {
+    #main{
+        display: grid;
+        width: 65%;
+        margin: auto;
+        grid-template-columns: repeat(3,1fr);
+    }
+  }
+  /* medium screen */
+@media all and (min-width: 701px) and (max-width: 900px) {
+    #main{
+        display: grid;
+        width: 65%;
+        margin: auto;
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+  /* Small screens */
+  @media all and (min-width: 500px) and (max-width: 700px) {
+    #main{
+        display: grid;
+        width: 65%;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
