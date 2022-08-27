@@ -2329,6 +2329,9 @@ function append(data) {
         let button = document.createElement("button")
         button.innerText = "ADD TO CARD"
         button.setAttribute("class", "product-button")
+        button.addEventListener("click", function () {
+            addToCart(e)
+        })
 
         imgDiv.append(img)
         priceDiv.append(newPrice, oldPrice)
@@ -2338,4 +2341,31 @@ function append(data) {
         card.append(imgDiv, contentDiv, button)
         container.append(card)
     })
+}
+
+function addToCart(ele) {
+    let store={
+                image:ele.image,
+                title:ele.title,
+                price:ele["new-price"],
+                price2:ele["old-price"],
+                quantity:1,
+                }
+    let data=JSON.parse(localStorage.getItem("added_to_cart"))|| [];
+    let check=0
+    data.forEach((ele)=>
+    {
+        if(ele.title==store.title)
+        {
+            +(ele.quantity)++
+            check=1;
+        }
+    })
+    if(check!=1)
+    {
+        data.push(store);
+    }
+    
+    localStorage.setItem("added_to_cart",JSON.stringify(data));
+    displayCart();
 }
