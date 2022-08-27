@@ -22,6 +22,34 @@ function append(data) {
         img.addEventListener("click",()=>{
            addToCartFunc(e);
        })
+       img.addEventListener("click",function()
+       {
+          let store={
+              image:e.image,
+              title:e.title,
+              price:e.finalPrice,
+              price2:e.strikePrice,
+              quantity:1,
+          }
+          let data=JSON.parse(localStorage.getItem("added_to_cart"))|| [];
+          let check=0
+          data.forEach((e)=>
+          {
+              if(e.title==store.title)
+              {
+                  +(e.quantity)++
+                  check=1;
+              }
+          })
+          if(check!=1)
+          {
+              data.push(store);
+          }
+          
+          localStorage.setItem("added_to_cart",JSON.stringify(data));
+          displayCart();
+          location.href="./productDetail.html";
+       })
        let contentDiv = document.createElement("div")
        contentDiv.setAttribute("class", "product-content")
        let title = document.createElement("div")
@@ -99,6 +127,7 @@ function addToCartFunc(e){
        quantity:1,
    };
    localStorage.setItem("addToCart",JSON.stringify(addObj));
+   window.location.href="productDetail.html"
 }
 
 

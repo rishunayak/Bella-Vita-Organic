@@ -30,7 +30,7 @@ width: 16px;
 }
 #cartbar
 {
-    z-index: 3;
+    z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
 }

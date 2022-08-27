@@ -1,5 +1,4 @@
-
-     #footerdiv
+#footerdiv
     {
        background-color: rgb(241 247 236);
        padding-top: 20px;
@@ -67,31 +66,7 @@
     {
         width: 200px;
     }
-    /* whatsApp */
-    a#whatsapp-message {
-        display: flex;
-        position: fixed;
-        right: 1.5rem;
-        bottom: 30px;
-        z-index: 5;
-        background: #fff;
-        border-radius: 50%;
-        padding: 0.3rem;
-        box-shadow: 0 0 10px -4px;
-   }
-    a#whatsapp-message * {
-        line-height: 40px;
-   }
-    a#whatsapp-message img {
-        width: 50px;
-        height: 50px;
-        display: block;
-   }
-    a#whatsapp-message span {
-        display: none;
-        padding: 0 0.4rem;
-        line-height: 41px;
-   }
+    
 /* large screen */
 @media all and (min-width: 901px) and (max-width: 1100px) {
     #fotbox

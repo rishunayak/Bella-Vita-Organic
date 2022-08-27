@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
+    <title>Add To Cart &ndash; Bella Vita Organic</title>
+    <style>
+        #productDetail
+        {
+            width: 70%;
+         
+            margin: auto;
+            display: flex;
+        }
+        #productDetail>div:nth-child(2) img{
+          width: 100%;
+        }
+        #rating_price
+        {
+          display: flex;
+  
+          justify-content: space-between;
+          align-items: center;
+        }
+        #rating_price>div>span
+        {
+             margin-right: 10px;
+        }
+        #productDetail h5{
+            font-size: 20px;
+        }
+        #productDetail button{
+    display: block;
+    width: 100%;
+    padding: 8px 0px;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: #495b4b;
+    color: #e4f0db;
+    
+      }
+      #counterBox
+      {
+        display: flex;
+      }
+      #counterBox button , #counterBox input
+      {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        border-radius: 0px;
+        border: 0px;
+      }
+      #counterBox input
+      {
+        margin-top: 5px;
+        height: 25.5px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid black;
+      }
+      #offerimg
+      {
+        margin-top: 5px;
+        
+      }
+      #divPin
+      {
+        display: flex;
+      }
+      #divPin>button
+      {
+        width: 120px;
+        border: 1px solid black;
+        height: 40px;
+        border-radius: 6px;
+        background-color: #e5f0da;
+        color: black;
+      }
+      #divPin>input
+      {
+        margin-top: 5px;
+        width: 400px;
+        height: 35.5px;
+        border-radius: 6px;
+        border: 1px solid black;
+        font-size: 18px;
+      }
+      p,span
+      {
+        font-size: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles/cartbar.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+   <!-- Side Bar Cart -->
+   <div id="cartbar" style="display: none;">
+    <div>
+     <p id="cartclose">Your Cart <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012151660996460734/unknown.png" alt="" ></p>
+     <a href="shopAll.html">Continue Shopping</a>
+    </div>
+    <div id="cartp">
+
+    </div>
+    <div id="checkout">
+    </div>
+</div>
+
+<!-- Side Bar Cart End-->
+      <!-- Header and Navbar Start -->
+  
+      <div id="header">
+        <div id="top_bar"></div>
+        <div id="navbar">
+
+    
+          <div id="nav1">
+            <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVO_220_x_220_480x.png?v=1653304683" alt=""> 
+            <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/Brave_220_x_220_480x.png?v=1653304701" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVL_220_x_220_480x.png?v=1653304721" alt="">
+        </div>
+
+        <div id="nav2">
+            <a href="shopAll.html">SHOP ALL</a> |
+            <a href="newArrivals.html">NEW ARRIVALS</a> |
+            <a href="bestSellers.html">BESTSELLERS</a> |
+            <a href="skinCare.html">SKIN CARE</a> |
+            <a href="hairCare.html">HAIR CARE</a> | 
+            <a href="bodyCare.html">BODY CARE</a> |
+            <a href="perfumes.html">PREFUMES</a> |
+            <a href="combos.html">COMBOS</a> |
+            <a href="buildAbox.html">BUILD A BOX</a> 
+           
+         </div>
+         
+         <div id="nav3">
+            <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012088877302939748/unknown.png" alt="">
+            <a href="login.html"><img src="https://cdn.discordapp.com/attachments/707486765136740384/1012089121168171028/unknown.png" alt=""></a>
+            <a href="#"><img  src="https://cdn.discordapp.com/attachments/707486765136740384/1012089258745544784/unknown.png" alt="" onclick="cart()"  id="cartpage"></a> 
+            <span id="cart"></span>
+        </div>  
+            
+        </div>
+           
+    </div>
+
+        <!-- Header and Navbar Start End -->
+
+     <div id="productDetail">
+       
+     </div>
+
+     <div id="footerdiv"></div>
+     <div id="whatsApp">
+      <a class="hide" href="https://api.whatsapp.com/send?phone=919319011662&text=Hi,%20I%20need%20some%20Help" target="_blank" id="whatsapp-message">
+          <img src="//cdn.shopify.com/s/files/1/0054/6665/2718/t/386/assets/whatsapp.svg?v=107532592768653809461659272626" />
+          <span>Message Us</span>
+        </a>
+  </div>
+</body>
+</html>
+
+
+<script>
+  
+
+  window.onscroll = function () {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 370||
+        document.documentElement.scrollTop > 100
+      ) {
+        document.getElementById("header").style.position = "fixed";
+        document.getElementById("header").style.width="100%";
+        document.getElementById("header").style.zIndex="1";
+        document.getElementById("header").style.background="white";
+      } else {
+        document.getElementById("header").style.position = "static";
+      }
+    }
+
+    let head=()=>
+ {
+    let data=["FREE SHIPPING on PREPAID Orders","Flexi Box - Buy any 4 products at ₹999"];
+    let count=0;
+    document.getElementById("top_bar").innerText=data[count];
+    count++
+
+    setInterval(()=>
+    {
+        if(count==data.length)
+        {
+            count=0;
+        }
+        document.getElementById("top_bar").innerText=data[count];
+        count++
+    },5000)
+ }
+ head();
+
+ function cart()
+{
+
+     document.getElementById("cartbar").style.display="block";  
+}
+
+
+
+
+
+
+  displayx();
+   
+  function displayx()
+  {
+    document.getElementById("productDetail").innerHTML=null;
+    let data=JSON.parse(localStorage.getItem("addToCart")) ||[];
+
+      let div1=document.createElement("div");
+      let img=document.createElement("img");
+      img.src=data.image;
+      div1.append(img);
+     
+     let div2=document.createElement("div");
+
+     let h5=document.createElement("h5");
+     h5.innerText=data.title;
+
+     let p=document.createElement("p");
+     p.innerText=data.description;
+    let priceRating=document.createElement("div")
+     let pricediv=document.createElement("div");
+     let span1=document.createElement("span");
+     span1.innerText=`₹${data.finalPrice}`
+    
+     let span2=document.createElement("span");
+     span2.innerText=`₹${data.strikePrice}`;
+
+     if(span2=="₹")
+     {
+        pricediv.append(span1,span2)
+     }
+     else
+     {
+        pricediv.append(span1)
+     }
+
+
+     let ratingdiv=document.createElement("div");
+     let rating=document.createElement("p");
+     rating.innerText=`${data.rating}★`;
+     ratingdiv.append(rating);
+     priceRating.id="rating_price"
+
+     let buttonAdd=document.createElement("button")
+     buttonAdd.innerText="ADD TO CART"
+     buttonAdd.addEventListener("click",function()
+     {
+         obj={
+             image: data.image,
+             price: data.finalPrice,
+             quantity: data.quantity,
+             title:data.title,
+         }
+
+         let storedata=JSON.parse(localStorage.getItem("added_to_cart")) || [];   
+         check=0;
+
+            storedata.forEach((elem)=>
+             {
+              if(elem.title==obj.title)
+              {
+                check=1
+              }
+           })
+
+           if(check==1)
+           {  console.log(storedata);
+                storedata.quantity=(+storedata.quantity)+(+obj.quantity);
+                console.log(storedata.quantity," ",obj.quantity)
+                localStorage.setItem("added_to_cart",JSON.stringify(storedata))
+                displayCart()
+           }
+           else
+           {
+             storedata.push(obj);
+             localStorage.setItem("added_to_cart",JSON.stringify(storedata))
+            displayCart();
+           }
+     })
+     priceRating.append(pricediv,rating)
+     
+     let bDiv=document.createElement("div");
+     let dec=document.createElement("button");
+        dec.innerText="-";
+        dec.addEventListener("click",function()
+        {
+            
+          let getData=JSON.parse(localStorage.getItem("addToCart"));
+          if(getData!=1)
+          {
+            getData.quantity--;
+            console.log(getData.quantity)
+            localStorage.setItem("addToCart",JSON.stringify(getData));
+            displayx();
+          }
+         
+         
+        })
+
+        let inpData=document.createElement("input");
+        inpData.type="text";
+        inpData.value=data.quantity;
+        inpData.id="count"
+        let inc=document.createElement("button");
+        inc.innerText="+";
+        inc.addEventListener("click",function()
+        { 
+          let getData=JSON.parse(localStorage.getItem("addToCart"));
+           
+          getData.quantity++;
+          console.log(getData.quantity)
+          localStorage.setItem("addToCart",JSON.stringify(getData));
+          displayx();
+           
+        })
+        bDiv.id="counterBox"
+        bDiv.append(dec,inpData,inc)
+        let  limitedoffer=document.createElement("p");
+        limitedoffer.innerText="LIMITED TIME OFFER!"
+        limitedoffer.style.color="#ffa442";
+        limitedoffer.style.fontWeight="bold"
+        limitedoffer.style.textAlign="center";
+        limitedoffer.style.fontSize="18px"
+        let offerimg=document.createElement("img");
+        offerimg.src="https://media.discordapp.net/attachments/707486765136740384/1012801418656231565/unknown.png";
+        offerimg.id="offerimg"
+        let hr=document.createElement("hr");
+        let divoffer=document.createElement("div");
+        let ofimg=document.createElement("img");
+        ofimg.src="https://media.discordapp.net/attachments/707486765136740384/1012802268418019490/dqdqwdq.PNG";
+        ofimg.style.width="6%"
+        ofimg.style.height="8%"
+
+        // let offertxt=document.createElement("p");
+        // offertxt.innerText="Offers";
+        // offertxt.style.fontSize="20px"
+        // offertxt.style.fontWeight="bold"
+        // offertxt.style.marginLeft="10px"
+        // divoffer.append(ofimg,offertxt);
+        // divoffer.style.display="flex"
+        // divoffer.style.alignItems="center"
+
+        // let ofbox=document.createElement("div");
+
+        // let divx=document.createElement("div");
+        // let dixp=document.createElement("p")
+        // dixp.innerText="7% Discount"
+        // dixp.style.backgroundColor="#e5f0da";
+        // dixp.style.color="##475d4b";
+        // let divy=document.createElement("div");
+        // let dixb=document.createElement("button")
+        // dixb.innerText="NEW7"
+        // dixb.style.border="1px dotted red"
+
+        // let des=document.createElement("p")
+        // des.innerText="New Users can avail 7% discount on their first order with a minimum order value of ₹499. Cannot be clubbed with any other offers or Bella Cash.";
+
+        // divx.append(dixp,)
+
+        let divPin=document.createElement("div");
+        let input=document.createElement("input");
+        input.type="text";
+        input.placeholder="Check for Delivery/COD Availablitiy";
+        let  checkButton=document.createElement("button")
+        checkButton.innerText="Check";
+        divPin.append(input,checkButton);
+        divPin.id="divPin";
+
+     div2.append(h5,p,priceRating,bDiv,buttonAdd,limitedoffer,offerimg,hr,divoffer,divPin)
+     div2.style.width="34%"
+     document.getElementById("productDetail").append(div1,div2)
+    
+  }
+
+  
+function cart()
+{
+
+     document.getElementById("cartbar").style.display="block";  
+}
+
+
+  displayCart();
+
+function displayCart()
+{
+    document.getElementById("cartp").innerHTML=null;
+    document.getElementById("checkout").innerHTML=null;
+    let cartdata=JSON.parse(localStorage.getItem("added_to_cart")) || [];
+    document.getElementById("cart").innerText=cartdata.length;
+   let total_price=0;
+    cartdata.forEach((ele,index)=>
+    { console.log("hello bro")
+        let mainDiv=document.createElement("div");
+
+        let imgDiv=document.createElement("div");
+        let img=document.createElement("img");
+        img.src=ele.image;
+       
+        imgDiv.append(img);
+
+        let detDiv=document.createElement("div");
+
+        let title=document.createElement("p");
+        title.innerText=ele.title;
+        let price=document.createElement("span");
+        price.innerText=`₹${(+ele.price)*(+ele.quantity)}`;
+       
+        let price2=document.createElement("span");
+        price2.innerText=ele.price2
+
+        let divUpdate=document.createElement("div");
+         
+        let bDiv=document.createElement("div");
+
+        let dec=document.createElement("button");
+        dec.innerText="-";
+        dec.addEventListener("click",function()
+        {
+            
+            let count=+(ele.quantity);
+            if(count!=1)
+            {
+                
+                
+                let getData=JSON.parse(localStorage.getItem("added_to_cart"));
+
+             getData.forEach((elem)=>
+             {
+              if(elem.title==ele.title)
+              {
+                elem.quantity--;
+                localStorage.setItem("added_to_cart",JSON.stringify(getData))
+                displayCart()
+              }
+           })
+            }
+          
+        })
+        let inpData=document.createElement("input");
+        inpData.type="text";
+        inpData.value=ele.quantity;
+        inpData.id="count"
+        let inc=document.createElement("button");
+        inc.innerText="+";
+        inc.addEventListener("click",function()
+        {
+            let count=ele.quantity;
+              +(count)++;
+           
+             
+           let getData=JSON.parse(localStorage.getItem("added_to_cart"));
+
+           getData.forEach((elem)=>
+           {
+              if(elem.title==ele.title)
+              {
+                elem.quantity++;
+                localStorage.setItem("added_to_cart",JSON.stringify(getData))
+                displayCart()
+              }
+           })
+
+
+                
+        })
+        bDiv.append(dec,inpData,inc)
+        
+        let Ddel=document.createElement("div");
+        let imgicon=document.createElement("img");
+        imgicon.src="https://cdn.discordapp.com/attachments/707486765136740384/1012147963801378876/unknown.png";
+        imgicon.style.width="20px";
+        imgicon.addEventListener("click",function()
+        {
+            cartdata.splice(index,1);
+            localStorage.setItem("added_to_cart",JSON.stringify(cartdata));
+            displayCart()
+        })
+        Ddel.append(imgicon)
+
+        divUpdate.append(bDiv,Ddel)
+       
+         detDiv.append(title,price,divUpdate)
+
+         mainDiv.append(imgDiv,detDiv);
+         
+         document.getElementById("cartp").append(mainDiv)
+         total_price=(+ele.price)*(+ele.quantity)+total_price;
+    })
+
+    let buybutton=document.createElement("button");
+    buybutton.innerText=`CHECKOUT │ ₹${total_price}`;
+    buybutton.id="checkoutbutton";
+    buybutton.addEventListener("click",function()
+    {
+        window.location.href="checkout.html";
+    })
+   
+    document.getElementById("checkout").append(buybutton);
+
+   document.getElementById("cartclose").addEventListener("click",function()
+   {
+    document.getElementById("cartbar").style.display="none";  
+   })  
+  
+}
+
+
+</script>
+
+<script type="module">
+   import {footer} from "./components/footer.js"
+   let footerdiv=document.getElementById("footerdiv");
+   footerdiv.innerHTML=footer();
+
+
+   
+</script>

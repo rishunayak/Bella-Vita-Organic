@@ -13,7 +13,9 @@ body {
     flex-direction: column;
     width: max-content;
     margin: auto;
-    margin-top: 60px;
+    position: relative;
+    top: 50px;
+    /* margin-top: 60px; */
 }
 
 #container>img{
@@ -169,7 +171,7 @@ body {
     top: 35px;
     left: 200px;
     transition: 500ms;
-    z-index: 2;
+    z-index: 1;
     cursor: pointer;
 }
 

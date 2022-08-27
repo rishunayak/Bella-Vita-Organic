@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#ALL PRODUCTS &ndash; Bella Vita Organic</title>
     <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
-    <title># All Body care Products &ndash; Bella Vita Organic</title>
     <link rel="stylesheet" href="./styles/cartbar.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/sidebar.css">
@@ -181,13 +181,12 @@
             <span>Message Us</span>
           </a>
     </div>
-
 </body>
 </html>
 
-<script src="./scripts/bodyCare.js"></script>
 <script src="./scripts/shopAll.js"></script>
 <script src="./Scripts/forAll.js"></script>
+
 
 
 <script type="module">
@@ -204,11 +203,11 @@ footerdiv.innerHTML=footer();
 
 let main = document.querySelector("#main");
 // <!-- ************************************put here your data in the form of array of objects******* -->   
-    append(bodyCare);
-    document.getElementById("totalProducts").innerText=bodyCare.length+" products";
+    append(shopAllData);
+    document.getElementById("totalProducts").innerText=shopAllData.length+" products";
     let filtering=document.getElementById("filtering");
     filtering.addEventListener("change",()=>{
-        filterFunc(bodyCare);
+        filterFunc(shopAllData);
  })
     // <!-- *************************************************************** -->
     </script>

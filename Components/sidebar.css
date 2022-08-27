@@ -12,10 +12,6 @@
             font-size: 16px; 
             margin-top: 10px;
         }
-        .flex{
-            display: flex;
-            justify-content: space-between;
-        }
         #side_bar
         {
             padding: 0% 10%;

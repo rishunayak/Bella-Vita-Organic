@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+}
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 35%;
+}
+form>input{
+    margin: 5px 0;
+    padding: 10px 20px;
+    font-size: large;
+}
+form>h1{
+    margin: 35px 0;
+    font-weight: 400;
+    font-size: 35px;
+}
+form>button{
+    width: 45%;
+    margin: auto;
+    margin-top: 35px;
+    background-color: #475d4b;
+    color: #fff;
+    font-size: large;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+form>a{
+    color: black;
+    margin-top: 15px;
+}
