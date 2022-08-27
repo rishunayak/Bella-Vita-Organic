@@ -99,6 +99,7 @@ function addToCartFunc(e){
        quantity:1,
    };
    localStorage.setItem("addToCart",JSON.stringify(addObj));
+   window.location.href="productDetail.html"
 }
 
 

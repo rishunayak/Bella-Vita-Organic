@@ -1,9 +1,11 @@
 #cartbar
 {
-width: 20%;
+width: 25%;
 
-margin-left: 80%;
+
+margin-left: 75%;
 position: absolute;
+position: fixed;
 height: 100%;
 background-color: white;
 

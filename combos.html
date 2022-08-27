@@ -179,7 +179,7 @@
 </body>
 </html>
 
-<script src="./scripts/bodyCare.js"></script>
+<script src="./scripts/combos.js"></script>
 
 
 <script>
@@ -397,11 +397,11 @@ footerdiv.innerHTML=footer();
 
 let main = document.querySelector("#main");
 // <!-- ************************************put here your data in the form of array of objects******* -->   
-    append(bodyCare);
-    document.getElementById("totalProducts").innerText=bodyCare.length+" products";
+    append(combos);
+    document.getElementById("totalProducts").innerText=combos.length+" products";
     let filtering=document.getElementById("filtering");
     filtering.addEventListener("change",()=>{
-        filterFunc(bodyCare);
+        filterFunc(combos);
  })
     // <!-- *************************************************************** -->
     </script>
