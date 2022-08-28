@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/checkout.css">
+    <link rel="stylesheet" href="./styles/payment.css">
+    <title>Payment</title>
+</head>
+<body>
+    <img src="https://media.discordapp.net/attachments/707486765136740384/1013184975429980241/Checkout_Banner.png?width=1440&height=384" id="banner">
+    <a href="./index.html" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/bellavita-logo_256x256_2cf787ef.png?54744" id="logo"></a>
+    <div id="container">
+        <div id="left">
+            <div id="checkoutNav">
+                <a href="./checkout.html"><span>Information</span></a>
+                <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" class="forward">
+                <a href="./shipping.html"><span>Shipping</span></a>
+                <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" class="forward">
+                <span>Payment</span>
+            </div>
+            <div id="contactInfo">
+                <div>
+                    <div class="th">Contact</div>
+                    <div id="contactEmail"></div>
+                </div>
+                <hr>
+                <div>
+                    <div class="th">Ship to</div>
+                    <div id="shippingAddress"></div>
+                </div>
+                <hr>
+                <div>
+                    <div class="th">Method</div>
+                    <div id="shippingMethod"></div>
+                    <span id="fees"></span>
+                </div>
+            </div>
+            <div id="cardPayment">
+                    <div id="topCard">
+                        <div id="cardNumber">
+                            <p for="">Card number</p>
+                            <input type="number" placeholder="Enter Card Number">
+                        </div>
+                        <div id="cardCVV">
+                            <p for="">CVV</p>
+                            <input type="number" placeholder="CVV">
+                        </div>
+                    </div>
+                    <div id="cardName">
+                        <p for="">Card holder name</p>
+                        <input type="text" placeholder="Enter Card holder name">
+                    </div>
+                    <div id="bottomCard">
+                        <p for="">Expiration date</p>
+                        <div id="exp">
+                            <input type="number" id="cardMonth" placeholder="DD">
+                            /
+                            <input type="number" id="cardYear" placeholder="YY">
+                        </div>
+                    </div>
+            </div>
+            <div id="leftBottom">
+                <div id="return">
+                    <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" alt="">
+                    <a href="./shipping.html" id="returnBtn"><span>Return to shipping</span></a>
+                </div>
+                <a href="./orderplaced.html"><button id="shippingBtn">Complete Order</button></a>
+            </div>
+        </div>
+        <hr>
+        <div id="right"></div>
+    </div>
+</body>
+</html>
+
+<script src="./Scripts/payment.js" type="module"></script>

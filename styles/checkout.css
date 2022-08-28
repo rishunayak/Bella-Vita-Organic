@@ -1,0 +1,304 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* body {
+    font-family: 'Open Sans', sans-serif;
+} */
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#container{
+    display: flex;
+}
+
+#left{
+    width: 56%;
+    padding: 80px 70px 80px 150px;
+}
+
+#right{
+    width: 44%;
+    padding: 80px 150px 80px 50px;
+    background-color: #fafafa;
+}
+
+.headingContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
+.headingContainer>div span{
+    font-size: 14px;
+    color: #545454;
+    font-weight: 400;
+}
+
+.label{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#inputEmail, #region{
+    padding: 15px 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 25px;
+}
+
+#newsletterCheckbox, #saveInfoCheckbox{
+    margin-top: 15px;
+    width: 17px;
+    height: 17px;
+    background-color: #495b4b;
+    color: #495b4b;
+}
+
+input{
+    font-size: 14px;
+    padding: 15px 12px;
+}
+
+#newsletter, #saveInfo{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.checkboxContainer{
+    display: flex;
+    align-items: center;
+}
+
+#shippingContainer{
+    margin-top: 50px;
+}
+
+#shippingContainer>input{
+    margin-top: 10px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#nameContainer, #stateContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#firstName, #lastName{
+    width: 49%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#stateContainer *{
+    width: 32%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#cartItems{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+
+.leftDiv{
+    width: 60px;
+}
+
+.leftDiv>img{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.rightDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 0px 0px 15px;
+    font-size: 14px;
+    color: #323232;
+}
+
+.rightDiv>div{
+    height: max-content;
+}
+
+.title{
+    font-size: 14px;
+    font-weight: 500;
+    width: 65%;
+}
+
+.card{
+    display: flex;
+}
+
+.leftDiv>div>div{
+    position: absolute;
+    background-color: #808080;
+    width: 23px;
+    height: 23px;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    bottom: 43px;
+    left: 40px;
+}
+
+.qtyPseudo{
+    position: relative;
+    width: 0px;
+    height: 0px;
+}
+
+hr{
+    opacity: 30%;
+}
+
+#right>hr{
+    margin: 15px 0px;
+}
+
+#promoContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#promoInput{
+    width: 78%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#promoBtn{
+    width: 20%;
+    padding: 15px 13px;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    color: white;
+}
+
+input:focus {
+    outline-color: #495b4b;
+}
+
+#subtotal, #shippingTotal{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #535353;
+    padding: 5px 0px;
+}
+
+#delCharges{
+    font-size: 12px;
+    color: #717171;
+}
+
+#sub_amount{
+    font-weight: 500;
+}
+
+#totalContainer{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+#totalContainer h3{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+#inr, #taxes{
+    color: #717171;
+}
+
+#totalAmount{
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+#totalRight{
+    display: flex;
+    align-items: center;
+}
+
+#return>img{
+    width: 10px;
+    margin-right: 3px;
+}
+
+#return{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #495b4b;
+}
+
+#leftBottom{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#shippingBtn{
+    font-size: 14px;
+    background-color: #495b4b;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#returnBtn{
+    color: #495b4b;
+}
+
+#banner {
+    height: 184px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: -4px;
+}
+
+#logo {
+    width: 137px;
+    position: absolute;
+    left: 135px;
+    top: 85px;
+    cursor: pointer;
+}
+a{
+    color: #545454;
+}

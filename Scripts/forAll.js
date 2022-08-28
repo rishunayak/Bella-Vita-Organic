@@ -190,3 +190,9 @@ function displayCart()
    })  
   
 }
+
+
+document.getElementById("nav1").addEventListener("click",function()
+{
+    window.location.href="index.html"
+})

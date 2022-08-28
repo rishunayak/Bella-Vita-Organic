@@ -2213,10 +2213,12 @@ let shopAllData = [{
 
 function shopAll() {
     append(shopAllData)
+	document.getElementById("totalProducts").innerText=shopAllData.length+" products";
 }
 document.getElementById("per").addEventListener("click",perfumesF);
 function perfumesF() {
     append(perfumesData)
+	document.getElementById("totalProducts").innerText=perfumesData.length+" products";
 }
 document.getElementById("her").addEventListener("click",her);
 function her() {
@@ -2227,6 +2229,7 @@ function her() {
     })
 
     append(filtered)
+	document.getElementById("totalProducts").innerText=filtered.length+" products";
 }
 document.getElementById("him").addEventListener("click",him);
 function him() {
@@ -2238,6 +2241,7 @@ function him() {
     })
 
     append(filtered)
+	document.getElementById("totalProducts").innerText=filtered.length+" products";
 }
 document.getElementById("uni").addEventListener("click",unisex);
 function unisex() {
@@ -2249,6 +2253,7 @@ function unisex() {
     })
 
     append(filtered)
+	document.getElementById("totalProducts").innerText=filtered.length+" products";
 }
 document.getElementById("body").addEventListener("click",bodyParfum);
 function bodyParfum() {
@@ -2260,6 +2265,7 @@ function bodyParfum() {
     })
 
     append(filtered)
+	document.getElementById("totalProducts").innerText=filtered.length+" products";
 }
 document.getElementById("lux").addEventListener("click",luxury);
 function luxury() {
@@ -2271,6 +2277,7 @@ function luxury() {
     })
 
     append(filtered)
+	document.getElementById("totalProducts").innerText=filtered.length+" products";
 }
 document.getElementById("gift").addEventListener("click",gift);
 function gift() {
@@ -2282,6 +2289,7 @@ function gift() {
     })
 
     append(filtered)
+	document.getElementById("totalProducts").innerText=filtered.length+" products";
 }
 
 // -----------------------------------------------------------------

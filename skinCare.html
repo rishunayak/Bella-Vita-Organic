@@ -5,7 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
-    <title># All Body care Products &ndash; Bella Vita Organic</title>
+    <title>Natural Skincare Products &ndash; Bella Vita Organic</title>
+    <style>
+        #headerimg
+        {
+            width: 80%;
+            margin: auto;
+            position: relative;
+            top: 20px;
+            
+        }
+        #headerimg>img
+        {
+            border-radius: 16px;
+            margin-left: 15%;
+        }
+    </style>
     <link rel="stylesheet" href="./styles/cartbar.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/sidebar.css">
@@ -14,9 +29,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
-    <!-- Side Bar Cart -->
-    <div id="cartbar" style="display: none;">
+     <!-- Side Bar Cart -->
+     <div id="cartbar" style="display: none;">
         <div>
          <p id="cartclose">Your Cart <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012151660996460734/unknown.png" alt="" ></p>
          <a href="shopAll.html">Continue Shopping</a>
@@ -168,7 +182,7 @@
                 
               </div>
             </div>
-        
+
         <div id="main"></div>
     </div>
 
@@ -182,13 +196,14 @@
             <span>Message Us</span>
           </a>
     </div>
-
 </body>
 </html>
 
-<script src="./scripts/bodyCare.js"></script>
+<script src="./scripts/skinCare.js"></script>
 <script src="./scripts/shopAll.js"></script>
 <script src="./Scripts/forAll.js"></script>
+
+
 
 
 <script type="module">
@@ -205,11 +220,11 @@ footerdiv.innerHTML=footer();
 
 let main = document.querySelector("#main");
 // <!-- ************************************put here your data in the form of array of objects******* -->   
-    append(bodyCare);
-    document.getElementById("totalProducts").innerText=bodyCare.length+" products";
+    append(skinCare);
+    document.getElementById("totalProducts").innerText=skinCare.length+" products";
     let filtering=document.getElementById("filtering");
     filtering.addEventListener("change",()=>{
-        filterFunc(bodyCare);
+        filterFunc(skinCare);
  })
     // <!-- *************************************************************** -->
     </script>

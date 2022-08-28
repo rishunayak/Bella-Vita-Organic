@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/checkout.css">
+    <link rel="stylesheet" href="./styles/shipping.css">
+    <title>Shipping</title>
+</head>
+<body>
+    <img src="https://media.discordapp.net/attachments/707486765136740384/1013184975429980241/Checkout_Banner.png?width=1440&height=384" id="banner">
+    <a href="./index.html" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/bellavita-logo_256x256_2cf787ef.png?54744" id="logo"></a>
+    <div id="container">
+        <div id="left">
+            <div id="checkoutNav">
+                <a href="./checkout.html"><span>Information</span></a>
+                <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" class="forward">
+                <a href="./shipping.html"><span>Shipping</span></a>
+                <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" class="forward">
+                <span>Payment</span>
+            </div>
+            <div id="contactInfo">
+                <div>
+                    <div class="th">Contact</div>
+                    <div id="contactEmail"></div>
+                </div>
+                <hr>
+                <div>
+                    <div class="th">Ship to</div>
+                    <div id="shippingAddress"></div>
+                </div>
+            </div>
+            <h2 class="label">Shipping method</h2>
+            <div id="shipMethod">
+                <div id="freeContainer">
+                    <input type="radio" id="freeRadio">
+                    <div id="freeShip"><span>Free Shipping (PayTM, Card, Netbanking, UPI, Wallets, Pay Later & PayPal)</span></div>
+                    <span>Free</span>
+                </div>
+                <div id="paidContainer">
+                    <input type="radio" id="paidRadio">
+                    <div id="paidShip"><span>Cash On Delivery / Pay On Delivery</span></div>
+                    <span>₹50.00</span>
+                </div>
+            </div>
+            <div id="leftBottom">
+                <div id="return">
+                    <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" alt="">
+                    <a href="./checkout.html" id="returnBtn"><span>Return to information</span></a>
+                </div>
+                <button id="shippingBtn"></button>
+            </div>
+        </div>
+        <hr>
+        <div id="right"></div>
+    </div>
+</body>
+</html>
+
+<script src="./Scripts/shipping.js" type="module"></script>

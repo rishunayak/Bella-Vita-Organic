@@ -13,15 +13,24 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding: 30px;
+    margin: auto;
+  
 }
+
 #filterdiv>div:nth-child(1){
-    width: 20%;
+    width: 0%;
 }
-#filterdiv>div:nth-child(2){
-    width: 60%;
+
+#filterdiv>label:nth-child(1){
+    width: 40%;
+    text-align: center;
+
 }
-#filterdiv>div:nth-child(3){
-    width: 20%;
+#filterdiv>label:nth-child(2){
+    width: 5%;
+}
+#filterdiv>select{
+    width: 15%;
 }
 div#filterdiv>div:first-child{
     width: 70%;
@@ -30,11 +39,6 @@ div#filterdiv>div:first-child{
 div#filterdiv>div:nth-child(2){
     width: 30%;
 }
-
-#totalProducts{
-    margin-right: 20%;
-}
-
 
 #main {
     display: grid;
@@ -143,6 +147,10 @@ a#whatsapp-message span {
         margin: auto;
         grid-template-columns: repeat(3,1fr);
     }
+    #filterdiv>label:nth-child(2){
+        width: 7%;
+    }
+  
   }
   /* medium screen */
 @media all and (min-width: 701px) and (max-width: 900px) {
@@ -152,13 +160,20 @@ a#whatsapp-message span {
         margin: auto;
         grid-template-columns: repeat(2,1fr);
     }
+    #filterdiv>label:nth-child(2){
+        width: 12%;
+    }
   }
   /* Small screens */
-  @media all and (min-width: 500px) and (max-width: 700px) {
+  @media all and (min-width: 300px) and (max-width: 700px) {
     #main{
         display: grid;
         width: 65%;
         margin: auto;
         grid-template-columns: repeat(1,1fr);
     }
+    #filterdiv>label:nth-child(2){
+        width: 12%;
+    }
+  
   }

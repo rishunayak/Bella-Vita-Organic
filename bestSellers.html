@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#1Bestsellers &ndash; Bella Vita Organic</title>
+    <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"/>
     <link rel="stylesheet" href="./styles/cartbar.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/sidebar.css">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-     <!-- Side Bar Cart -->
+    
     <!-- Side Bar Cart -->
     <div id="cartbar" style="display: none;">
         <div>
@@ -38,11 +39,9 @@
 
     
             <div id="nav1">
-               
                 <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVO_220_x_220_480x.png?v=1653304683" alt=""> 
                 <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/Brave_220_x_220_480x.png?v=1653304701" alt="">
                 <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVL_220_x_220_480x.png?v=1653304721" alt="">
-            
             </div>
 
             <div id="nav2">
@@ -68,13 +67,13 @@
         </div>
            
     </div>
-    
+
         <!-- Header and Navbar Start End -->
     
  <!-- Filter JS start -->
 
     <div id="filterdiv">
-      
+    
         <label for="" id="totalProducts"></label>
         <label for="" id="textsortby">Sort by: </label>
         <select name="" id="filtering">
@@ -93,17 +92,16 @@
     <div id="container">
         <div id="side_nav">
            
-                <div id="side_bar">
-                <div id="page"></div>
+            <div id="side_bar">
                 <div><img src="https://cdn.discordapp.com/attachments/707486765136740384/1012124707614634074/unknown.png" alt="">REFINE BY</div>
                 <div id="navbar_line">CATEGORIES</div> 
-                <a href="shop_all.html"><u>Shop All</u></a>  <br>
-                <a href="new_arrivals.html">New Arrivals</a> <br>
-               <a href="bestsellers.html">Bestsellers</a> <br>
+                <a href="shopAll.html">Shop All</a>  <br>
+                <a href="newArrivals.html">New Arrivals</a> <br>
+               <a href="bestSellers.html">Bestsellers</a> <br>
         
         
                <div class="dropdown">
-                    <a class="dropdown-btn" href="#">Skin Care&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <i class="fas fa-chevron-down"></i></a> 
+                    <div class="flex"><a class="dropdown-btn" href="./skinCare.html">Skin Care</a> <i class="fas fa-chevron-down"></i></div>
                 <div class="dropdown-container">
                     <a class="link" href="#">FACE CREAM</a><br>
                     <a class="link" href="">FACE PACK/MASK</a>  <br> 
@@ -116,7 +114,7 @@
                 </div>
         
                 <div class="dropdown">
-                    <a class="dropdown-btn" href="#">Hair Care&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <i class="fas fa-chevron-down"></i></a> 
+                    <div class="flex"><a class="dropdown-btn" href="./hairCare.html">Hair Care</a> <i class="fas fa-chevron-down"></i></div>
                 <div class="dropdown-container">
                     <a class="link" href="#">ALL HAIRCARE PRODUCTS</a><br>
                     <a class="link" href="">SHAMPOO</a>  <br> 
@@ -127,7 +125,7 @@
                 </div>
         
                 <div class="dropdown">
-                    <a class="dropdown-btn" href="#">Body Care&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<i class="fas fa-chevron-down"></i></a> 
+                    <div class="flex"><a class="dropdown-btn" href="./bodyCare.html">Body Care</a> <i class="fas fa-chevron-down"></i></div>
                 <div class="dropdown-container">
                     <a class="link" href="#">ALL BODY CARE PRODUCTS</a><br>
                     <a class="link" href="">BODY SOAPS</a>  <br> 
@@ -139,20 +137,20 @@
                 </div>
         
                 <div class="dropdown">
-                    <a class="dropdown-btn" href="#">Perfumes&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<i class="fas fa-chevron-down"></i></a> 
+                    <div class="flex"><a class="dropdown-btn" href="./perfumes.html">Perfumes</a> <i class="fas fa-chevron-down"></i></div>
                 <div class="dropdown-container">
-                    <a href="#">ALL PERFUMES</a><br>
-                    <a href="">PERFUMES FOR HER</a> <br>  
-                    <a href="">PERFUMES FOR HIM</a> <br> 
-                    <a href="">UNISEX PERFUMES</a> <br>
-                    <a href="">BODY PARFUM</a> <br>
-                    <a href="">LITTLE LUXURIES</a> <br>
-                    <a href="">GIFT SETS</a>
+                    <a id="per" href="#">ALL PERFUMES</a><br>
+                    <a id="her" href="#">PERFUMES FOR HER</a> <br>  
+                    <a id="him" href="#">PERFUMES FOR HIM</a> <br> 
+                    <a id="uni" href="#">UNISEX PERFUMES</a> <br>
+                    <a id="body" href="#">BODY PARFUM</a> <br>
+                    <a id="lux" href="#">LITTLE LUXURIES</a> <br>
+                    <a id="gift" href="#">GIFT SETS</a>
                 </div>
                 </div>
         
                 <div class="dropdown">
-                    <a class="dropdown-btn" href="#">Combos&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<i class="fas fa-chevron-down"></i></a> 
+                    <div class="flex"><a class="dropdown-btn" href="./combos.html">Combos</a> <i class="fas fa-chevron-down"></i></div>
                 <div class="dropdown-container">
                     <a href="#"> GIFT BOXES</a><br>
                     <a href="">ALL COMBOS</a><br>   
@@ -178,211 +176,18 @@
 
 
     <div id="footerdiv"></div>
+    <div id="whatsApp">
+        <a class="hide" href="https://api.whatsapp.com/send?phone=919319011662&text=Hi,%20I%20need%20some%20Help" target="_blank" id="whatsapp-message">
+            <img src="//cdn.shopify.com/s/files/1/0054/6665/2718/t/386/assets/whatsapp.svg?v=107532592768653809461659272626" />
+            <span>Message Us</span>
+          </a>
+    </div>
 </body>
 </html>
 
-<script src="./scripts/hairCare.js"></script>
-
-<script>
-const dropdowns = document.querySelectorAll(".dropdown");
-
-dropdowns.forEach(el => {
-
-  const button = el.querySelector(".dropdown-btn");
-  
-  button.addEventListener("click", () => {
-    // Close all
-    [...dropdowns].filter(x => x != el).forEach(el => el.classList.remove("is-open"));
-    // Toggle one
-    el.classList.toggle("is-open");
-  });
-});
-
- 
-
-   
-   window.onscroll = function () {
-      scrollFunction();
-    };
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 370||
-        document.documentElement.scrollTop > 100
-      ) {
-        document.getElementById("header").style.position = "fixed";
-        document.getElementById("header").style.width="100%";
-        document.getElementById("header").style.zIndex="1";
-        document.getElementById("header").style.background="white";
-      } else {
-        document.getElementById("header").style.position = "static";
-      }
-    }
-
-   
-//    Header
-     
-let head=()=>
- {
-    let data=["FREE SHIPPING on PREPAID Orders","Flexi Box - Buy any 4 products at ₹999"];
-    let count=0;
-    document.getElementById("top_bar").innerText=data[count];
-    count++
-
-    setInterval(()=>
-    {
-        if(count==data.length)
-        {
-            count=0;
-        }
-        document.getElementById("top_bar").innerText=data[count];
-        count++
-    },5000)
- }
- head();
-
-
-// Side Cart Bar
-
-function cart()
-{
-
-     document.getElementById("cartbar").style.display="block";  
-}
-
-
-// Display Cart Bar
-
-displayCart();
-
-function displayCart()
-{
-    document.getElementById("cartp").innerHTML=null;
-    document.getElementById("checkout").innerHTML=null;
-    let cartdata=JSON.parse(localStorage.getItem("added_to_cart")) || [];
-    document.getElementById("cart").innerText=cartdata.length;
-   let total_price=0;
-    cartdata.forEach((ele,index)=>
-    { console.log("hello bro")
-        let mainDiv=document.createElement("div");
-
-        let imgDiv=document.createElement("div");
-        let img=document.createElement("img");
-        img.src=ele.image;
-       
-        imgDiv.append(img);
-
-        let detDiv=document.createElement("div");
-
-        let title=document.createElement("p");
-        title.innerText=ele.title;
-        let price=document.createElement("span");
-        price.innerText=`₹${(+ele.price)*(+ele.quantity)}`;
-       
-        let price2=document.createElement("span");
-        price2.innerText=ele.price2
-
-        let divUpdate=document.createElement("div");
-         
-        let bDiv=document.createElement("div");
-
-        let dec=document.createElement("button");
-        dec.innerText="-";
-        dec.addEventListener("click",function()
-        {
-            
-            let count=+(ele.quantity);
-            if(count!=1)
-            {
-                
-                
-                let getData=JSON.parse(localStorage.getItem("added_to_cart"));
-
-             getData.forEach((elem)=>
-             {
-              if(elem.title==ele.title)
-              {
-                elem.quantity--;
-                localStorage.setItem("added_to_cart",JSON.stringify(getData))
-                displayCart()
-              }
-           })
-            }
-          
-        })
-        let inpData=document.createElement("input");
-        inpData.type="text";
-        inpData.value=ele.quantity;
-        inpData.id="count"
-        let inc=document.createElement("button");
-        inc.innerText="+";
-        inc.addEventListener("click",function()
-        {
-            let count=ele.quantity;
-              +(count)++;
-           
-             
-           let getData=JSON.parse(localStorage.getItem("added_to_cart"));
-
-           getData.forEach((elem)=>
-           {
-              if(elem.title==ele.title)
-              {
-                elem.quantity++;
-                localStorage.setItem("added_to_cart",JSON.stringify(getData))
-                displayCart()
-              }
-           })
-
-
-                
-        })
-        bDiv.append(dec,inpData,inc)
-        
-        let Ddel=document.createElement("div");
-        let imgicon=document.createElement("img");
-        imgicon.src="https://cdn.discordapp.com/attachments/707486765136740384/1012147963801378876/unknown.png";
-        imgicon.style.width="20px";
-        imgicon.addEventListener("click",function()
-        {
-            cartdata.splice(index,1);
-            localStorage.setItem("added_to_cart",JSON.stringify(cartdata));
-            displayCart()
-        })
-        Ddel.append(imgicon)
-
-        divUpdate.append(bDiv,Ddel)
-       
-         detDiv.append(title,price,divUpdate)
-
-         mainDiv.append(imgDiv,detDiv);
-         
-         document.getElementById("cartp").append(mainDiv)
-         total_price=(+ele.price)*(+ele.quantity)+total_price;
-    })
-
-    let buybutton=document.createElement("button");
-    buybutton.innerText=`CHECKOUT │ ₹${total_price}`;
-    buybutton.id="checkoutbutton";
-    buybutton.addEventListener("click",function()
-    {
-        window.location.href="checkout.html";
-    })
-   
-    document.getElementById("checkout").append(buybutton);
-
-   document.getElementById("cartclose").addEventListener("click",function()
-   {
-    document.getElementById("cartbar").style.display="none";  
-   })  
-  
-}
-
-document.getElementById("nav1").addEventListener("click",function()
-{
-    window.location.href="index.html"
-})
-
-</script>
+<script src="./scripts/bestSellers.js"></script>
+<script src="./scripts/shopAll.js"></script>
+<script src="./Scripts/forAll.js"></script>
 
 
 
@@ -400,13 +205,11 @@ footerdiv.innerHTML=footer();
 
 let main = document.querySelector("#main");
 // <!-- ************************************put here your data in the form of array of objects******* -->   
-    append(hairCare);
-    document.getElementById("totalProducts").innerText=hairCare.length+" products";
+    append(bestSellersData);
+    document.getElementById("totalProducts").innerText=bestSellersData.length+" products";
     let filtering=document.getElementById("filtering");
     filtering.addEventListener("change",()=>{
-        filterFunc(hairCare);
+        filterFunc(bestSellersData);
  })
     // <!-- *************************************************************** -->
-
-
     </script>

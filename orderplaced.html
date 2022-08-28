@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+    <style>
+        *{
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        #banner {
+            height: 184px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: -4px;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        #logo {
+            width: 137px;
+            position: absolute;
+            left: 135px;
+            top: 85px;
+            cursor: pointer;
+        }
+        h2
+        {
+            color: #495b4b;
+            margin-top: 10px;
+        }
+        #container,#loading{
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h1{
+            font-weight: 700;
+            color: #495b4b;
+            margin-bottom: 15px;
+        }
+        p{
+            color: #333333;
+            margin-bottom: 30px;
+            opacity: 70%;
+        }
+        button{
+            font-size: 14px;
+    background-color: #495b4b;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media.discordapp.net/attachments/707486765136740384/1013184975429980241/Checkout_Banner.png?width=1440&height=384" id="banner">
+    <a href="./index.html" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/bellavita-logo_256x256_2cf787ef.png?54744" id="logo"></a>
+    <div id="container" style="display:none">
+        <h1 id="orderPlaced">Your order has been placed!</h1>
+        <p>An email confirmation has been sent to your registered email address</p>
+        <a href="./index.html"><button>Continue Shopping</button></a>
+    </div>
+
+
+
+    
+    <div id="loading" class="loading">
+         <img src="https://cdn.discordapp.com/attachments/707486765136740384/1013180271715160144/loading-gif.gif" alt="">
+         <H2>Proccessing</H2>
+    </div>
+</body>
+</html>
+
+
+<script>
+
+
+
+ 
+loading(2000)
+
+
+function loading(delay)
+{
+ setTimeout(()=>
+ {
+     document.getElementById("loading").style.display="none";
+     document.getElementById("container").style.display="block";
+    
+
+ },delay);
+}
+
+
+done(2000)
+
+function done(delay)
+{
+ setTimeout(()=>
+ {
+    completed(2000)
+ },delay);
+}
+
+function  completed(delay)
+{
+    setTimeout(()=>
+ {
+    move()
+ },delay);
+}
+
+function move()
+{
+    let data=[];
+     localStorage.setItem("added_to_cart",JSON.stringify(data))
+     window.location.href="index.html"
+}
+
+
+</script>
+

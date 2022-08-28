@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/checkout.css">
+    <title>Checkout</title>
+    <style>
+        .forward {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 10px;
+    margin: 0px 5px;
+}
+
+#checkoutNav {
+    margin-bottom: 25px;
+}
+
+#checkoutNav>a, #checkoutNav>span {
+    font-size: 12px;
+    color: #38493b;
+    font-weight: 500;
+    opacity: 70%;
+}
+
+#checkoutNav>a:nth-child(1) {
+    font-size: 12px;
+    color: #333333;
+    opacity: 100%;
+}
+    </style>
+</head>
+<body>
+    <img src="https://media.discordapp.net/attachments/707486765136740384/1013184975429980241/Checkout_Banner.png?width=1440&height=384" id="banner">
+    <a href="./index.html" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/bellavita-logo_256x256_2cf787ef.png?54744" id="logo"></a>
+    <div id="container">
+        <div id="left">
+            <div id="checkoutNav">
+                <a href="./checkout.html"><span>Information</span></a>
+                <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" class="forward">
+                <a href="./shipping.html"><span>Shipping</span></a>
+                <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" class="forward">
+                <span>Payment</span>
+            </div>
+            <div class="headingContainer">
+                <h2 class="label">Contact information</h2>
+                <div id="loginValidation">
+                    <span>Already have an account?</span>
+                    <span> <a href="login.html">Log in</a></span>
+                </div>
+            </div>
+            <input type="email" id="inputEmail" placeholder="Email">
+            <div class="checkboxContainer">
+                <input type="checkbox" id="newsletterCheckbox">
+                <span id="newsletter" onclick="newsletter()">Email me with news and offers</span>
+            </div>
+            <div id="shippingContainer">
+                <h2 class="label">Shipping address</h2>
+                <select name="" id="region">
+                    <option value="">Country/region</option>
+                    <option value="india">India</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="us">United States of America</option>
+                    <option value="ge">Germany</option>
+                </select>
+                <div id="nameContainer">
+                    <input type="text" id="firstName" placeholder="First name">
+                    <input type="text" id="lastName" placeholder="Last name">
+                </div>
+                <input type="text" id="addressOne" placeholder="Address">
+                <input type="text" id="addressTwo" placeholder="Apartment, suite, etc. (optional)">
+                <div id="stateContainer">
+                    <input type="text" placeholder="City" id="city">
+                    <select name="state" id="state" class="form-control">
+                        <option value="">State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                    <input type="number" placeholder="Pincode" id="pincode">
+                </div>
+                <input type="number" placeholder="Phone" id="number">
+            </div>
+            <div class="checkboxContainer">
+                <input type="checkbox" id="saveInfoCheckbox">
+                <span id="saveInfo" onclick="save()">Save this information for next time</span>
+            </div>
+            <div id="leftBottom">
+                <div id="return">
+                    <img src="https://media.discordapp.net/attachments/707486765136740384/1013184976235270194/back.png" alt="">
+                    <span id="returnBtn">Return to cart</span>
+                </div>
+               <button id="shippingBtn">Continue to shipping</button>
+            </div>
+        </div>
+        <hr>
+        <div id="right">
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./Scripts/checkout.js" type="module"></script>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32_e6868b28-0d13-4b5b-8bb9-ee8f8ff90a89_32x32.png?v=1651655557"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Account &ndash; Bella Vita Organic</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/cartbar.css">
+  
+    <link rel="stylesheet" href="./styles/signUp&login.css">
+    <style>
+      
+     #footerdiv
+    {
+       background-color: rgb(241 247 236);
+       padding-top: 20px;
+       margin-top: 35px;
+      position: absolute;
+      bottom: 0%;
+     
+    }
+    #userloged
+    {
+        
+        width: max-content;
+        margin: auto;
+        text-align: center;
+        margin-top: 10%;
+    }
+    #userloged>button
+    {
+      width: 80%;
+    margin: auto;
+    margin-top: 35px;
+    background-color: #475d4b;
+    color: #fff;
+    font-size: large;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    }
+    #userloged>img
+    {
+      width: 20%;
+      margin-bottom: 20px;
+    }
+   
+    </style>
+  </head>
+  <body>
+    <!-- Side Bar Cart -->
+    <div id="cartbar" style="display: none;">
+      <div>
+       <p id="cartclose">Your Cart <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012151660996460734/unknown.png" alt="" ></p>
+       <a href="shopAll.html">Continue Shopping</a>
+      </div>
+      <div id="cartp">
+
+      </div>
+      <div id="checkout">
+      </div>
+  </div>
+ 
+  <!-- Side Bar Cart End-->
+    <!-- Header and Navbar Start -->
+  
+    <div id="header">
+      <div id="top_bar"></div>
+      <div id="navbar">
+
+  
+          <div id="nav1">
+              <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVO_220_x_220_480x.png?v=1653304683" alt=""> 
+              <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/Brave_220_x_220_480x.png?v=1653304701" alt="">
+              <img src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVL_220_x_220_480x.png?v=1653304721" alt="">
+          </div>
+
+          <div>
+              <a href="shopAll.html">SHOP ALL</a> |
+              <a href="newArrivals.html">NEW ARRIVALS</a> |
+              <a href="bestSellers.html">BESTSELLERS</a> |
+              <a href="skinCare.html">SKIN CARE</a> |
+              <a href="hairCare.html">HAIR CARE</a> | 
+              <a href="bodyCare.html">BODY CARE</a> |
+              <a href="perfumes.html">PERFUMES</a> |
+              <a href="combos.html">COMBOS</a> |
+              <a href="buildAbox.html">BUILD A BOX</a> 
+             
+           </div>
+           
+           <div>
+              <img src="https://cdn.discordapp.com/attachments/707486765136740384/1012088877302939748/unknown.png" alt="">
+              <a href="login.html"><img src="https://cdn.discordapp.com/attachments/707486765136740384/1012089121168171028/unknown.png" alt=""></a>
+              <a href="#"><img  src="https://cdn.discordapp.com/attachments/707486765136740384/1012089258745544784/unknown.png" alt="" onclick="cart()"  id="cartpage"></a> 
+              <span id="cart"></span>
+          </div>  
+          
+      </div>
+         
+  </div>
+
+      <!-- Header and Navbar Start End -->
+    <form action="" method="" id="loginform">
+      <h1>Login</h1>
+      <input type="email" id="loginEmail" placeholder="Email" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <a href="" style="text-align: left">Forgot your password?</a>
+      <button id="login">Sign in</button>
+      <a href="./signUp.html">Create account</a>
+    </form>
+
+
+
+
+
+     
+     <div id="userloged" style="display: none;">
+       <img src="https://media.discordapp.net/attachments/707486765136740384/1012089121168171028/unknown.png" alt="">
+        <h1 id="user"></h1>
+        <button id="logout">Logout</button>
+     </div>
+
+
+
+
+
+
+    <div id="footerdiv"></div>
+    <div id="whatsApp">
+      <a class="hide" href="https://api.whatsapp.com/send?phone=919319011662&text=Hi,%20I%20need%20some%20Help" target="_blank" id="whatsapp-message">
+          <img src="//cdn.shopify.com/s/files/1/0054/6665/2718/t/386/assets/whatsapp.svg?v=107532592768653809461659272626" />
+          <span>Message Us</span>
+        </a>
+  </div>
+  </body>
+</html>
+<script src="./Scripts/forAll.js"></script>
+<script type="module">
+//******************************************************************
+import {footer} from "./components/footer.js"
+let footerdiv=document.getElementById("footerdiv");
+footerdiv.innerHTML=footer();
+
+// window.onscroll = function () {
+//       scrollFunction();
+//     };
+//     function scrollFunction() {
+//       if (
+//         document.body.scrollTop > 370||
+//         document.documentElement.scrollTop > 100
+//       ) {
+//         document.getElementById("header").style.position = "fixed";
+//         document.getElementById("header").style.width="100%";
+//         document.getElementById("header").style.zIndex="1";
+//         document.getElementById("header").style.background="white";
+//       } else {
+//         document.getElementById("header").style.position = "static";
+//       }
+//     }
+
+   
+//    Header
+     
+let head=()=>
+ {
+    let data=["FREE SHIPPING on PREPAID Orders","Flexi Box - Buy any 4 products at ₹999"];
+    let count=0;
+    document.getElementById("top_bar").innerText=data[count];
+    count++
+
+    setInterval(()=>
+    {
+        if(count==data.length)
+        {
+            count=0;
+        }
+        document.getElementById("top_bar").innerText=data[count];
+        count++
+    },5000)
+ }
+ head();
+
+</script>
+<script>
+
+
+
+
+ let registerUsers=JSON.parse(localStorage.getItem("users"))||[];
+  let loginData = JSON.parse(localStorage.getItem("user")) || {};
+  let isUserloggedin=false;
+  localStorage.setItem("isUserloggedin",isUserloggedin);
+  let login = (event) => {
+    event.preventDefault();
+    
+    loginData = {
+      email: document.getElementById("loginEmail").value,
+      password: document.getElementById("loginPassword").value,
+
+    };
+    // console.log('loginData :>> ', loginData);
+    localStorage.setItem("user", JSON.stringify(loginData));
+    let flag=false;
+    registerUsers.forEach((element) => {
+      if (
+        element.email === loginData.email &&
+        element.password === loginData.password
+      ) {
+        let userName=element.firstName+" "+element.lastName;
+        localStorage.setItem("userName",userName);
+        flag=true;
+      } 
+    });
+    
+    if(flag){
+      alert("Login successful");
+        isUserloggedin=true;
+        localStorage.setItem("isUserloggedin",isUserloggedin);
+        location.href = "./newArrivals.html";
+    }else{
+      alert("Wrong Credentials");
+    }
+  };
+  document.getElementById("login").addEventListener("click", login);
+
+
+
+  
+
+  loged()
+
+  function loged()
+  {
+    let userloged=localStorage.getItem("userName");
+
+    if(userloged!="null" && userloged)
+    {
+      
+      document.getElementById("userloged").style.display="block"
+      document.getElementById("loginform").style.display="none"
+      document.getElementById("user").innerText=userloged;
+    } 
+     
+  }
+
+document.getElementById("logout").addEventListener("click",function()
+{ 
+    localStorage.setItem("userName",null);
+     window.location.reload()
+})
+
+document.getElementById("nav1").addEventListener("click",function()
+{
+    window.location.href="index.html"
+})
+
+</script>
+
+
+
+                
