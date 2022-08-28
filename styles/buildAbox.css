@@ -1,8 +1,15 @@
+#boxes
+{
+  position: relative;
+  top: 55px;
+   margin-bottom: 50px;
+} 
 #topPart{
     width: 80%;
     margin: auto;
     margin-bottom: 55px;
-    margin-top: 40px;
+    
+    
 }
 #topPart>img{
     width: 100%;

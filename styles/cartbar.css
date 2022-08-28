@@ -1,0 +1,157 @@
+#cartbar
+{
+width: 25%;
+
+
+margin-left: 75%;
+position: absolute;
+position: fixed;
+height: 100%;
+background-color: white;
+
+
+}
+#cartbar>div:first-child
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 25px;
+}
+#cartbar>div:first-child>a
+{
+
+color: black;
+font-size: 20px;
+}
+#cartbar>div:first-child img
+{
+width: 16px;
+}
+#cartbar
+{
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+#cartp
+{
+    height: 80%;
+    overflow: auto;
+   
+}
+#cartp::-webkit-scrollbar
+        {
+            width: 3px;
+
+        }
+        #cartp::-webkit-scrollbar-thumb {
+        background: #9b9b9b; 
+        }
+        #cartp::-webkit-scrollbar-track
+        {
+            background-color: #d0d0d0;
+        }
+#cartbar>div
+{
+    padding: 10px;
+    
+}
+#cartp>div
+{
+    display: flex;
+  
+}
+#cartp>div>div>img
+{
+    width: 100px;
+}
+#cartp>div>div:nth-child(2)
+{
+    border-left: 1px solid #495b4b;
+    
+    margin-top: 5px;
+}
+#cartp>div
+{
+    border-bottom: 1px solid #495b4b;
+   
+}
+#cartp>div>div:first-child
+{
+    width: 30%;
+}
+#cartp>div>div:last-child
+{
+    width: 60%;
+}
+#cartp>div>div:nth-child(3)
+{
+    display: flex;
+}
+
+#cartp>div>div input
+{
+    width: 15px;
+    height: 14px;
+    text-align: center;
+ 
+}
+#cartp>div>div p
+{
+    font-size: 15px;
+}
+#cartp>div>div
+{
+    padding-left: 8px;
+    
+}
+#cartp>div>div>div
+{
+   
+    display: flex;
+    justify-content: space-between;
+}
+#cartp>div>div>div>div
+{
+    display: flex;
+    align-items: center;
+   
+}
+
+
+
+
+#cartbar>#cartp button{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 19px;
+    border: none;
+    background-color: #495b4b;
+    color: #e4f0db;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    margin-bottom: 4px;
+    border-radius: 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+#cartbar button
+{
+    display: block;
+    width: 100%;
+    margin-top: -27px;
+    font-weight: 600;
+    padding: 10px 0px;
+    font-size: 19px;
+    border-radius: 10px;
+    border: none;
+    background-color: #495b4b;
+    color: #e4f0db;
+}
